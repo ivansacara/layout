@@ -3,13 +3,13 @@
 
     <div class="post-images__image-wrap">
       <div class="post-images__image-wrap-inner">
-        <img class="post-images__img" src="white_background.jpg" alt="" >
+        <img class="post-images__img" src="../static/img/white_background.jpg" alt="" >
       </div>
     </div>
 
     <div class="post-images__image-wrap">
       <div class="post-images__image-wrap-inner">
-        <img class="post-images__img" src="white_background.jpg" alt="" >
+        <img class="post-images__img" src="../static/img/white_background.jpg" alt="" >
       </div>
     </div>
 

@@ -3,16 +3,13 @@
     <Slider />
     <div class="container">
       <div class="main-page__description">
-        <h2 class="main-page__title">Архитектура | ДИЗАЙН ИНТЕРЬЕРА </h2>
+        <h2 class="main-page__title">{{ $t('mainPage.title') }}</h2>
         <p class="main-page__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel mauris sed massa molestie dignissim. Cras dictum, tortor id luctus faucibus, nulla libero congue quam, at malesuada nunc nunc ac augue. Donec dictum pellentesque placerat.
-          Etiam felis mauris, finibus eu volutpat non, malesuada in sapien.
-          Suspendisse potenti. Ut varius lectus ac ante convallis porta. Ut ullamcorper ut odio eget tempus. Donec sagittis, est in faucibus gravida,
-          ugue augue luctus libero, eu finibus augue arcu a dui. In urna elit, tristique vel urna nec, euismod rutrum massa. Curabitur porttitor sagittis enim, eu cursus orci hendrerit in. Donec in augue urna. Praesent lobortis augue ut quam lobortis feugiat at nec ligula. Sed blandit pellentesque venenatis. Proin sit amet lacinia sapien, a rutrum sapien. Suspendisse mollis, velit sed porttitor molestie, lectus metus semper leo, vel lacinia orci lorem quis nisi. Donec rutrum mauris vitae rhoncus condimentum.
+          {{ $t('mainPage.text') }}
         </p>
       </div>
     </div>
-  <Posts />
+  <Posts :enabled="true"/>
   </div>
 </template>
 
@@ -25,6 +22,12 @@ export default {
   head() {
     return {
       title: "Layout",
+      meta: [
+        {
+          name: "description",
+          content: "My Custom Description",
+        },
+      ],
     };
   },
 
@@ -33,7 +36,8 @@ export default {
 <style lang="scss">
 .main-page {
   &__description {
-  max-width: 1050px;
+    padding-top: 90px;
+    max-width: 1050px;
     width: 100%;
     margin: 0 auto 115px;
     font-family: "Gotham Pro Light", sans-serif;

@@ -2,13 +2,23 @@
   <div class="page-heading">
     <div class="container">
       <div class="page-heading__inner">
-        <nuxt-link class="page-heading__back" :to="localePath('/portfolio')"><span><</span>Назад</nuxt-link>
-        <h1 class="page-heading__title">О нас</h1>
+        <nuxt-link class="page-heading__back" v-if="showBack" :to="localePath('/portfolio')"><span><</span>Назад</nuxt-link>
+        <h1 class="page-heading__title">{{ $t(title) }}</h1>
       </div>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  name:"Page-heading",
+  props:{
+    title: {type: String},
+    showBack: {type: Boolean, default: false}
+  }
+}
+
+</script>
 
 <style lang="scss">
 .page-heading{

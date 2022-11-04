@@ -1,5 +1,5 @@
 <template>
-  <button class="show-more-btn">{{ $t('showMoreBtn.text') }}</button>
+  <nuxt-link :to="localePath('/portfolio')" class="show-more-btn">{{ $t('showMoreBtn.text') }}</nuxt-link>
 </template>
 
 <style lang="scss">

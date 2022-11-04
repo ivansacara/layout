@@ -1,6 +1,6 @@
 <template>
   <div class="before-after-page">
-    <PageHeading />
+    <PageHeading :title=title />
     <div class="container">
       <div class="before-after-page__content">
         <BeforeAfter />
@@ -11,7 +11,22 @@
   </div>
 </template>
 
+<script>
+export default {
+  name:"Before/After",
 
+  head() {
+    return {
+      title: `Layout ${this.$t(this.title)}`,
+    };
+  },
+  data () {
+    return {
+      title: 'header.beforeAfter',
+    }
+  }
+}
+</script>
 <style lang="scss">
 .before-after-page {
 

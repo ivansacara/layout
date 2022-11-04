@@ -6,10 +6,10 @@
     </div>
     <div class="before-after__item-images">
       <div class="before-after__item-image-wrapper">
-        <img src="white_background.jpg" alt="" class="before-after__item-image">
+        <img src="../static/img/white_background.jpg" alt="" class="before-after__item-image">
       </div>
       <div class="before-after__item-image-wrapper">
-        <img src="white_background.jpg" alt="" class="before-after__item-image">
+        <img src="../static/img/white_background.jpg" alt="" class="before-after__item-image">
       </div>
     </div>
   </div>

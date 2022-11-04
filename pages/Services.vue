@@ -1,6 +1,6 @@
 <template>
     <div class="services-page">
-      <PageHeading />
+      <PageHeading :title=title />
       <div class="container">
         <div class="services-page__content">
           <div class="services-page__description">
@@ -67,10 +67,10 @@
           </div>
           <div class="services-page__contact">
             <div class="services-page__contact-heading">
-              <h2 class="services-page__contact-title">ЗАКАЗАТЬ ПРОЕКТ</h2>
+              <h2 class="services-page__contact-title">{{ $t('servicesPage.title') }}</h2>
               <div class="services-page__contact-subtitle">
-                <p>Оставьте заявку</p>
-                <p>Менеджер свяжется в Вами в ближайшее время</p>
+                <p>{{ $t('servicesPage.subTitleTop') }}</p>
+                <p>{{ $t('servicesPage.subTitleBottom') }}</p>
               </div>
               <ContactForm />
             </div>
@@ -79,6 +79,23 @@
       </div>
     </div>
 </template>
+
+<script>
+export default {
+
+  name:"Services",
+  head() {
+    return {
+      title: `Layout ${this.$t(this.title)}`,
+    };
+  },
+  data () {
+    return {
+      title: 'header.services',
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 .services-page {

@@ -1,10 +1,12 @@
 <template>
-  <div class="burger" @click="openNavigation">
+  <div class="burger" @click="openNavigation" v-bind:class="{'active': isActive}" >
     <span></span>
   </div>
 </template>
 
 <script>
+
+import {GlobalEventEmitter} from "@/utils/globalEventEmitter";
 
 export default {
   name: "Header",
@@ -17,8 +19,17 @@ export default {
   methods: {
     openNavigation() {
       document.body.classList.toggle("navIsOpened");
+      // document.body.classList.toggle("navIsOpened");
+      // GlobalEventEmitter.$emit('overlay-toggleShow', {})
+      // GlobalEventEmitter.$emit('nav-toggleShow', {})
+      // this.isActive = !this.isActive
     },
   },
+  // created() {
+  //   GlobalEventEmitter.$on('burger-toggleClass', () => {
+  //     // document.body.classList.toggle("navIsOpened");
+  //   })
+  // },
 };
 </script>
 

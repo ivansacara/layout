@@ -1,6 +1,6 @@
 <template>
   <div class="post-image">
-    <img class="post-image__img" src="white_background_2.jpg" alt="" >
+    <img class="post-image__img" src="../static/img/white_background_2.jpg" alt="" >
   </div>
 </template>
 

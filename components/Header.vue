@@ -1,5 +1,5 @@
 <template>
-  <header class="header" v-bind:class="{ active: isActive }">
+  <header class="header">
     <div class="header__main">
       <div class="header__main-top">
         <a class="header__phone-link header__phone-link--mobile" href="tel:+37379187494">
@@ -29,17 +29,21 @@
 
         <Burger />
       </div>
-      <div class="header__main-bottom">
+      <div class="header__main-bottom" v-bind:class="{'opened': isActive}">
         <div class="header__langs--mobile">
          <LanguageSwitcher />
         </div>
         <nav class="header__nav">
-          <nuxt-link :to="localePath('/')" class="header__nav-link" v-on:click.native="closeNavigation()">Главная</nuxt-link>
-          <nuxt-link :to="localePath('/services')" class="header__nav-link" v-on:click.native="closeNavigation()">Услуги</nuxt-link>
-          <nuxt-link :to="localePath('/portfolio')" class="header__nav-link" v-on:click.native="closeNavigation()">Проекты</nuxt-link>
-          <nuxt-link :to="localePath('/before-after')" class="header__nav-link" v-on:click.native="closeNavigation()">До/После</nuxt-link>
-          <nuxt-link :to="localePath('/about')" class="header__nav-link" v-on:click.native="closeNavigation()">О Нас</nuxt-link>
-          <nuxt-link :to="localePath('/contacts')" class="header__nav-link" v-on:click.native="closeNavigation()">Контакты</nuxt-link>
+          <nuxt-link
+            v-for="(item, index) in menu"
+            v-bind:todo="item"
+            v-bind:key="index"
+            :to="localePath(item.path)"
+            class="header__nav-link"
+            v-on:click.native="closeNavigation()"
+          >
+            {{ $t(item.text) }}
+          </nuxt-link>
         </nav>
       </div>
     </div>
@@ -48,10 +52,21 @@
 
 <script>
 
+import {GlobalEventEmitter} from "@/utils/globalEventEmitter";
+
 export default {
   name: "Header",
+
   data() {
     return {
+      menu: [
+        { text: 'header.main', path: '/' },
+        { text: 'header.services', path: '/services' },
+        { text: 'header.portfolio', path: '/portfolio' },
+        { text: 'header.beforeAfter', path: '/before-after' },
+        { text: 'header.about', path: '/about' },
+        { text: 'header.contacts', path: '/contacts' }
+      ],
       isActive: false,
     }
   },
@@ -59,15 +74,30 @@ export default {
   methods: {
     closeNavigation() {
       document.body.classList.remove("navIsOpened");
+      // GlobalEventEmitter.$emit('burger-overlay-nav-close', {})
     },
   },
+  // created() {
+  //   GlobalEventEmitter.$on('nav-toggleShow', () => {
+  //     this.isActive = !this.isActive;
+  //     // document.body.classList.toggle("navIsOpened");
+  //   })
+  //   GlobalEventEmitter.$on('nav-removeClass', () => {
+  //     this.isActive = !this.isActive;
+  //     // document.body.classList.toggle("navIsOpened");
+  //   })
+  // },
 };
 </script>
 
 <style lang="scss">
 .header {
-  position: relative;
-  z-index: 15;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  //z-index: 15;
+  z-index: 1001;
   &__main {
     position: relative;
   }
@@ -138,10 +168,16 @@ export default {
     }
   }
   &__nav-link {
-    padding: 10px 0;
+    padding: 15px 0;
     font-size: 21px;
+    line-height: 1;
+    white-space: nowrap;
     @media (min-width: 768px) {
       padding: 0 13px;
+      font-size: 19px;
+    }
+    @media (min-width: 992px) {
+      font-size: 21px;
     }
   }
   &__main-bottom {
@@ -158,11 +194,9 @@ export default {
       transition: all 0.5s;
       transform: translateX(320px);
       overflow: auto;
-    }
-  }
-  &.active {
-    .header__main-bottom {
-      transform: translateX(0);
+      //&.opened {
+      //  transform: translateX(0);
+      //}
     }
   }
 }

@@ -1,5 +1,3 @@
-const configContentful = require("./.contentful.json");
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head() {
@@ -21,48 +19,10 @@ export default {
           name: "viewport",
           content: "width=device-width, initial-scale=1.0",
         },
-        {
-          ...i18nHead.meta,
-        },
+        ...i18nHead.meta,
       ],
       link: [
-        {
-          href: "/favicon.png",
-          rel: "shortcut icon",
-        },
-        {
-          href: "/apple-touch-icon.png",
-          rel: "apple-touch-icon",
-          sizes: "180x180",
-        },
-        {
-          href: "/favicon-32x32.png",
-          rel: "icon",
-          type: "image/png",
-          sizes: "32x32",
-        },
-        {
-          href: "/favicon-16x16.png",
-          rel: "icon",
-          type: "image/png",
-          sizes: "16x16",
-        },
-        {
-          href: "/safari-pinned-tab.svg",
-          rel: "mask-icon",
-          color: "#5bbad5",
-        },
-        {
-          href: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap",
-          rel: "stylesheet",
-        },
-        {
-          href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap",
-          rel: "stylesheet",
-        },
-        {
-          ...i18nHead.link,
-        },
+        ...i18nHead.link,
       ],
       script: [],
     };
@@ -71,17 +31,18 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
-  env: {
-    CTF_SPACE_ID: configContentful.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: configContentful.CTF_CDA_ACCESS_TOKEN,
-    CTF_PERSON_ID: configContentful.CTF_PERSON_ID,
-    CTF_BLOG_POST_TYPE_ID: configContentful.CTF_BLOG_POST_TYPE_ID,
-
-    LANGS: {
-      ru: "ru-MD",
-      ro: "ro-MD",
-    },
-  },
+  // env: {
+  //   CTF_SPACE_ID: configContentful.CTF_SPACE_ID,
+  //   CTF_CDA_ACCESS_TOKEN: configContentful.CTF_CDA_ACCESS_TOKEN,
+  //   CTF_PERSON_ID: configContentful.CTF_PERSON_ID,
+  //   CTF_BLOG_POST_TYPE_ID: configContentful.CTF_BLOG_POST_TYPE_ID,
+  //
+  //   LANGS: {
+  //     ru: "ru-MD",
+  //     ro: "ro-MD",
+  //     en: "en-EN"
+  //   },
+  // },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: "~/plugins/vue-swiper.js", mode: "client" }],
@@ -102,7 +63,7 @@ export default {
     [
       "@nuxtjs/axios",
       {
-        baseURL: "https://maroresidence.md/",
+        baseURL: "https://layout.md/",
       },
     ],
     [
@@ -112,14 +73,22 @@ export default {
           {
             code: "ru",
             iso: "ru-MD",
+            file: "ru.js",
           },
           {
             code: "ro",
             iso: "ro-MD",
+            file: "ro.js",
+          },
+          {
+            code: "en",
+            iso: "en-EN",
+            file: "en.js",
           },
         ],
+        langDir: "static/i18n/",
         defaultLocale: "ru",
-        baseUrl: "https://maroresidence.md",
+        baseUrl:  "http://localhost:3000",
         detectBrowserLanguage: {
           useCookie: true,
           cookieKey: "i18n_redirected",
@@ -146,4 +115,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+
 };

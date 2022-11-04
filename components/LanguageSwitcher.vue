@@ -1,10 +1,26 @@
 <template>
   <div class="langs">
-    <nuxt-link to="#" class="lang">ro</nuxt-link>
-    <nuxt-link to="#" class="lang lang--ru">ru</nuxt-link>
-    <nuxt-link to="#" class="lang">en</nuxt-link>
+    <nuxt-link class="lang" :to="switchLocalePath(selectLang('ro'))">{{ $t(`common.ro`) }}</nuxt-link>
+    <nuxt-link class="lang lang--ru" :to="switchLocalePath(selectLang('ru'))">{{ $t(`common.ru`) }}</nuxt-link>
+    <nuxt-link class="lang" :to="switchLocalePath(selectLang('en'))">{{ $t(`common.en`) }}</nuxt-link>
   </div>
 </template>
+
+
+<script>
+
+export default {
+  name: "Langs",
+
+  methods: {
+    selectLang(lang) {
+      return this._i18n.localeCodes.find(x => {
+        return x === lang;
+      });
+    }
+  },
+};
+</script>
 
 <style lang="scss">
 

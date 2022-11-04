@@ -1,14 +1,14 @@
 <template>
   <div class="contacts-page">
-    <PageHeading />
+    <PageHeading :title=title />
     <div class="container">
       <div class="contacts-page__heading">
         <p class="contacts-page__text">
-          Если у вас есть какие-либо вопросы, обращайтесь к нам по телефону:
+          {{ $t('contactsPage.topText') }}
         </p>
         <a class="contacts-page__phone" href="tel:+37368580787">+373 68 580 787</a>
         <p class="contacts-page__text">
-          Если вы хотите заказать проект заполните, пожалуйста, форму заказа.
+          {{ $t('contactsPage.bottomText') }}
         </p>
       </div>
       <div class="contacts-page__contact-form">
@@ -17,6 +17,23 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name:"Contacts",
+  head() {
+    return {
+      title: `Layout ${this.$t(this.title)}`,
+    };
+  },
+  data () {
+    return {
+      title: 'header.contacts',
+    }
+  }
+}
+</script>
+
 
 <style lang="scss">
 .contacts-page {

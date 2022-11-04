@@ -43,10 +43,20 @@
         </nuxt-link>
       </div>
     </div>
-    <ShowMoreBtn />
+    <ShowMoreBtn v-if="!enabled"/>
+    <ShowMoreLink v-if="enabled"/>
   </div>
 </template>
 
+
+<script>
+export default {
+  name: "Post",
+  props:{
+    enabled: {type: Boolean, default: false}
+  }
+}
+</script>
 
 <style lang="scss">
 

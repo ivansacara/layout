@@ -64,12 +64,6 @@ export default {
 <style lang="scss">
 
 .slider {
-  position: relative;
-  top: -95px;
-  @media (min-width: 768px) {
-    top: -195.2px;
-    z-index: 12;
-  }
 
   &__container {
     position: relative;
@@ -91,15 +85,25 @@ export default {
 
   &__slide-image {
     width: 100%;
-    max-height: 1255px;
+    min-height: 450px;
     height: 100%;
+
+    @media (min-width: 768px) {
+      height: 100vh;
+      width: 100vw;
+    }
   }
 
   &__slide-img {
     width: 100%;
-    max-height: 1255px;
+    display: block;
     min-height: 450px;
     object-fit: cover;
+    @media (min-width: 768px) {
+      height: 100vh;
+      min-height: 450px;
+      width: 100vw;
+    }
   }
 
   &__slide-text {
@@ -142,6 +146,11 @@ export default {
       width: 30px;
       height: 30px;
       fill: #ffffff;
+      transition: all 0.5s;
+      &:hover,
+      &:focus {
+        fill: #888888;
+      }
       @media (min-width: 768px) {
         width: 50px;
         height: 50px;

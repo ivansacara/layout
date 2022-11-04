@@ -1,5 +1,5 @@
 <template>
-  <button class="button-fixed" type="button" @click="openForm">мы онлаин. <span>напишите нам</span></button>
+  <button class="button-fixed" type="button" @click="openForm">{{ $t('fixedBtn.text_1') }}<span>{{ $t('fixedBtn.text_2') }}</span></button>
 </template>
 
 
@@ -49,7 +49,7 @@ export default {
   }
   @media (min-width: 768px) {
     padding: 20px 30px;
-    bottom: 420px;
+    bottom: 370px;
     font-size: 16px;
   }
 }

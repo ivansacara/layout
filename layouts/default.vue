@@ -18,21 +18,33 @@
 
   </div>
 </template>
-<script lang="js">
+<script>
+import { GlobalEventEmitter } from '/utils/globalEventEmitter';
+
 export default {
   name: "default",
 
-  data() {
-    return {
-      isActive: false,
-    }
-  },
+  // data() {
+  //   return {
+  //     isActive: false,
+  //   }
+  // },
   methods: {
     overlayClicked() {
       document.body.classList.remove('navIsOpened');
       document.body.classList.remove('formIsOpened');
+      // this.isActive = !this.isActive;
+      // GlobalEventEmitter.$emit('burger-removeClass', {})
+      // GlobalEventEmitter.$emit('nav-removeClass', {})
+      // GlobalEventEmitter.$emit('form-removeShow', {})
+
     },
-  }
+  },
+  // created() {
+  //   GlobalEventEmitter.$on('overlay-toggleShow', () => {
+  //     this.isActive = !this.isActive;
+  //   })
+  // },
 };
 
 </script>
@@ -40,7 +52,7 @@ export default {
 @font-face {
   font-family: "Gotham Pro";
   src: local("Gotham Pro"),
-  url(static/GothaProReg.ttf),url(static/GothaProLig.ttf) format("truetype");
+  url(static/font/GothaProReg.ttf),url(static/font/GothaProLig.ttf) format("truetype");
 }
 *,
 *::before,
@@ -210,13 +222,26 @@ a {
     border-bottom: none;
   }
 }
+//.portfolio-page,
+//.before-after-page,
+//.services-page,
+//.about-page,
+//.contacts-page {
+//  .page-heading .page-heading__back{
+//    display: none;
+//  }
+//}
+
 .portfolio-page,
 .before-after-page,
 .services-page,
 .about-page,
-.contacts-page {
-  .page-heading .page-heading__back{
-    display: none;
+.contacts-page,
+.post-page {
+  padding-top: 95px;
+  @media (min-width: 768px) {
+    padding-top: 195px;
   }
+
 }
 </style>

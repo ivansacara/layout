@@ -1,6 +1,6 @@
 <template>
   <div class="post-page">
-    <PageHeading />
+    <PageHeading :title=title showBack='true'/>
     <div class="container">
       <div class="post__content">
         <PostImages />
@@ -13,6 +13,17 @@
   </div>
 </template>
 
+
+<script>
+export default {
+  name:"Post",
+  head() {
+    return {
+      title: `Layout ${this.$t(this.title)}`,
+    };
+  },
+}
+</script>
 
 <style lang="scss">
 

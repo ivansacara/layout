@@ -1,16 +1,53 @@
 <template>
-  <form class="contact-form">
-    <label for="name" class="contact-form__label">Имя</label>
-    <input type="text" id="name" class="contact-form__input">
-    <label for="mail" class="contact-form__label">Email</label>
-    <input type="email" id="mail" class="contact-form__input">
-    <label for="phone" class="contact-form__label">Телефон</label>
-    <input type="number" id="phone" class="contact-form__input">
-    <label for="comment" class="contact-form__label">Комментарии</label>
-    <input type="text" id="comment" class="contact-form__input">
-    <button type="submit" class="contact-form__button">Отправить заявку</button>
-  </form>
+    <form class="contact-form" method="post" @submit.prevent="submit">
+      <label class="contact-form__label" for="name">{{ $t('contactForm.name') }}</label>
+      <input class="contact-form__input" required v-model="name" type="text" id="name">
+      <label class="contact-form__label" for="mail">{{ $t('contactForm.mail') }}</label>
+      <input class="contact-form__input" required v-model="email" type="email" id="mail">
+      <label class="contact-form__label" for="phone">{{ $t('contactForm.phone') }}</label>
+      <input class="contact-form__input" required v-model="phone" type="tel" id="phone">
+      <label class="contact-form__label" for="comment">{{ $t('contactForm.message') }}</label>
+      <input class="contact-form__input" required v-model="message" type="text" id="comment">
+      <button class="contact-form__button" type="submit">{{ $t('contactForm.btnText') }}</button>
+    </form>
 </template>
+
+<script>
+
+export default {
+  name: "contact-form",
+
+  data() {
+    return {
+      name: "",
+      email: "",
+      phone: "",
+      message:"",
+
+      // BOT-TELEGRAM
+      token: '5480669760:AAHbHSai7FzFe8IwmN6YwwXt6k6O2N4Ujfs',
+      chat_id : -1001777955089,
+
+    };
+  },
+  methods: {
+    submit(){
+      const messageInTelegram = `<b>Новый Запрос:</b>%0A <b>Имя:</b> <i>"${this.name}"</i>%0A <b>Mail:</b> <i>"${this.email}"</i>%0A <b>Телефон:</b> <i>${this.phone}</i>%0A <b>Сообшение:</b> <i>"${this.message}"</i>`;
+      fetch(`https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.chat_id}&text=${messageInTelegram}&parse_mode=html`,)
+        .then(response => {
+            this.name = "";
+            this.email = "";
+            this.phone = "";
+            this.message ="";
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    }
+  }
+}
+
+</script>
 
 <style lang="scss">
 .contact-form{
