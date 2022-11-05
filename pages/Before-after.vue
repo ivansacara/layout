@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name:"Before/After",
+  name:"Before-After",
 
   head() {
     return {
