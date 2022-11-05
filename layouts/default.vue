@@ -147,7 +147,7 @@ a {
 }
 .pop-up-form {
   position: fixed;
-  z-index: 1000;
+  z-index: 1005;
   max-width: 580px;
   width: 100%;
   top: 50%;
