@@ -20,6 +20,11 @@ export default {
   head() {
     return {
       title: `Layout ${this.$t(this.title)}`,
+      meta: [
+        {
+          name: "Post",
+        },
+      ],
     };
   },
 }

@@ -37,6 +37,11 @@ export default {
     topText:"If you have any questions, please contact us by phone:",
     bottomText: "If you want to order a project, please fill out the order form."
   },
+  popUpForm: {
+    title: "Оставьте заявку",
+    textTop: "Хотите получить бесплатную консультация или заказать проект?",
+    textBottom: "Менеджер связиться с Вами с ближайшее время."
+  },
   contactForm: {
     name:"Name",
     mail:"Email",

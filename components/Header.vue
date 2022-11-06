@@ -105,9 +105,12 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0 15px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #5b5754;
     @media (min-width: 768px) {
-      padding: 35px 0 30px 0;
+      padding-top: 35px;
+      padding-bottom: 25px;
     }
   }
   &__socials-langs {
@@ -129,6 +132,7 @@ export default {
     }
   }
   &__phone-link {
+    font-family: "Gotham Pro Light", sans-serif;
     &--mobile {
       @media (min-width: 768px) {
         display: none;
@@ -164,12 +168,13 @@ export default {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      padding: 20px 0;
+      padding: 25px 0;
     }
   }
   &__nav-link {
     padding: 15px 0;
     font-size: 21px;
+    font-family: "Gotham Pro Light", sans-serif;
     line-height: 1;
     white-space: nowrap;
     @media (min-width: 768px) {
@@ -194,9 +199,6 @@ export default {
       transition: all 0.5s;
       transform: translateX(320px);
       overflow: auto;
-      //&.opened {
-      //  transform: translateX(0);
-      //}
     }
   }
 }

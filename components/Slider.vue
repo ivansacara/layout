@@ -14,23 +14,13 @@
         </div>
       </div>
         <button id="slider__button-prev" class="slider__button-prev swiper-button slider__btn" >
-          <svg
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M16.2426 6.34317L14.8284 4.92896L7.75739 12L14.8285 19.0711L16.2427 17.6569L10.5858 12L16.2426 6.34317Z"
-
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 267 512.43">
+            <path fill-rule="nonzero" d="M263.78 18.9c4.28-4.3 4.3-11.31.04-15.64a10.865 10.865 0 0 0-15.48-.04L3.22 248.38c-4.28 4.3-4.3 11.31-.04 15.64l245.16 245.2c4.28 4.3 11.22 4.28 15.48-.05s4.24-11.33-.04-15.63L26.5 256.22 263.78 18.9z"/>
           </svg>
         </button>
         <button id="slider__button-next" class="slider__button-next swiper-button slider__btn">
-          <svg
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10.5858 6.34317L12 4.92896L19.0711 12L12 19.0711L10.5858 17.6569L16.2427 12L10.5858 6.34317Z"
-
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 267 512.43">
+            <path fill-rule="nonzero" d="M3.22 18.9c-4.28-4.3-4.3-11.31-.04-15.64s11.2-4.35 15.48-.04l245.12 245.16c4.28 4.3 4.3 11.31.04 15.64L18.66 509.22a10.874 10.874 0 0 1-15.48-.05c-4.26-4.33-4.24-11.33.04-15.63L240.5 256.22 3.22 18.9z"/>
           </svg>
         </button>
     </div>
@@ -114,6 +104,7 @@ export default {
     text-align: center;
     p {
       font-size: 14px;
+      font-family: "Gotham Pro Light", sans-serif;
       line-height: 1;
       margin-bottom: 35px;
       @media (min-width: 768px) {

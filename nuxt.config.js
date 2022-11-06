@@ -5,6 +5,13 @@ export default {
     return {
       meta: [
         {
+          charset: "utf-8",
+        },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1.0",
+        },
+        {
           name: "msapplication-TileColor",
           content: "#da532c",
         },
@@ -12,16 +19,25 @@ export default {
           name: "theme-color",
           content: "#ffffff",
         },
-        {
-          charset: "utf-8",
-        },
-        {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1.0",
-        },
         ...i18nHead.meta,
       ],
       link: [
+        {
+          href: "/logo.png",
+          rel: "shortcut icon",
+        },
+        {
+          href: "/logo.png",
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+        },
+        {
+          href: "/logo.png",
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+        },
         ...i18nHead.link,
       ],
       script: [],

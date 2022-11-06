@@ -8,7 +8,7 @@
       <input class="contact-form__input" required v-model="phone" type="tel" id="phone">
       <label class="contact-form__label" for="comment">{{ $t('contactForm.message') }}</label>
       <input class="contact-form__input" required v-model="message" type="text" id="comment">
-      <button class="contact-form__button" type="submit">{{ $t('contactForm.btnText') }}</button>
+      <button class="contact-form__button" type="submit" >{{ $t('contactForm.btnText') }}</button>
     </form>
 </template>
 
@@ -25,25 +25,39 @@ export default {
       message:"",
 
       // BOT-TELEGRAM
-      token: '5480669760:AAHbHSai7FzFe8IwmN6YwwXt6k6O2N4Ujfs',
-      chat_id : -1001777955089,
+      token: '5651956390:AAF7UdWvVmwXrUPBCl_84Q7-IWCohSbbWL8',
+      chat_id : -1001835353593,
 
     };
   },
   methods: {
     submit(){
       const messageInTelegram = `<b>Новый Запрос:</b>%0A <b>Имя:</b> <i>"${this.name}"</i>%0A <b>Mail:</b> <i>"${this.email}"</i>%0A <b>Телефон:</b> <i>${this.phone}</i>%0A <b>Сообшение:</b> <i>"${this.message}"</i>`;
-      fetch(`https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.chat_id}&text=${messageInTelegram}&parse_mode=html`,)
-        .then(response => {
+      if (this.name !== '' && this.email !== '' && this.phone !== '' &&  this.message !== ''){
+        fetch(`https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.chat_id}&text=${messageInTelegram}&parse_mode=html`,)
+          .then(response => {
             this.name = "";
             this.email = "";
             this.phone = "";
             this.message ="";
-        })
-        .catch(error => {
-          console.log(error)
-        })
-    }
+          })
+          .catch(error => {
+            console.log(error)
+          })
+        document.body.classList.remove('formIsOpened');
+      }
+      // fetch(`https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.chat_id}&text=${messageInTelegram}&parse_mode=html`,)
+      //   .then(response => {
+      //         this.name = "";
+      //         this.email = "";
+      //         this.phone = "";
+      //         this.message ="";
+      //   })
+      //   .catch(error => {
+      //     console.log(error)
+      //   })
+    },
+
   }
 }
 
@@ -59,13 +73,12 @@ export default {
   padding: 40px 30px 50px 30px;
   margin: 0 auto;
   text-align: left;
-  overflow: auto;
-  max-height: 100vh;
   @media (min-width: 576px){
     padding: 60px 60px 70px 60px;
   }
   &__label{
     font-size: 18px;
+    font-family: "Gotham Pro Light", sans-serif;
     line-height: 1;
     font-weight: 400;
     margin-bottom: 5px;

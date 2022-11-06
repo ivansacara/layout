@@ -37,6 +37,11 @@ export default {
     topText:"Dacă aveți întrebări, vă rugăm să ne contactați la telefon:",
     bottomText: "Dacă doriți să comandați un proiect, vă rugăm să completați formularul de comandă."
   },
+  popUpForm: {
+    title: "Оставьте заявку",
+    textTop: "Хотите получить бесплатную консультация или заказать проект?",
+    textBottom: "Менеджер связиться с Вами с ближайшее время."
+  },
   contactForm: {
     name:"Nume",
     mail:"Email",

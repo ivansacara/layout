@@ -87,6 +87,11 @@ export default {
   head() {
     return {
       title: `Layout ${this.$t(this.title)}`,
+      meta: [
+        {
+          name: "services",
+        },
+      ],
     };
   },
   data () {
@@ -174,7 +179,7 @@ export default {
   &__title {
     font-size: 36px;
     line-height: 1.1;
-    font-family: "Gotham Pro Medium", sans-serif;
+    font-family: "Gotham Pro Light", sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -210,7 +215,8 @@ export default {
   }
 
   &__list-item {
-    font-size: 24px;
+    font-size: 21px;
+    font-family: "Gotham Pro Light", sans-serif;
     line-height: 1.1;
 
     @media (max-width: 1500px) {

@@ -2,11 +2,14 @@
   <div class="wrapper">
     <div class="overlay" @click="overlayClicked"></div>
     <div class="pop-up-form">
-      <span class="pop-up-form__icon" @click="overlayClicked">
+       <span class="pop-up-form__icon" @click="overlayClicked">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="122.878px" height="122.88px" viewBox="0 0 122.878 122.88" enable-background="new 0 0 122.878 122.88" xml:space="preserve">
             <path d="M1.426,8.313c-1.901-1.901-1.901-4.984,0-6.886c1.901-1.902,4.984-1.902,6.886,0l53.127,53.127l53.127-53.127 c1.901-1.902,4.984-1.902,6.887,0c1.901,1.901,1.901,4.985,0,6.886L68.324,61.439l53.128,53.128c1.901,1.901,1.901,4.984,0,6.886 c-1.902,1.902-4.985,1.902-6.887,0L61.438,68.326L8.312,121.453c-1.901,1.902-4.984,1.902-6.886,0 c-1.901-1.901-1.901-4.984,0-6.886l53.127-53.128L1.426,8.313L1.426,8.313z"/>
         </svg>
       </span>
+      <div class="pop-up-form__title">{{ $t('popUpForm.title') }}</div>
+      <p class="pop-up-form__text">{{ $t('popUpForm.textTop') }}</p>
+      <p class="pop-up-form__text">{{ $t('popUpForm.textBottom') }}</p>
       <ContactForm />
     </div>
     <Header  />
@@ -99,7 +102,8 @@ main {
 .overflow{
   overflow: hidden;
 }
-.header__main,
+.header__main-top,
+.header__main-bottom,
 .footer__main {
   padding-left: 15px;
   padding-right: 15px;
@@ -148,7 +152,7 @@ a {
 .pop-up-form {
   position: fixed;
   z-index: 1005;
-  max-width: 580px;
+  max-width: 993px;
   width: 100%;
   top: 50%;
   left: 50%;
@@ -157,14 +161,46 @@ a {
   visibility: hidden;
   opacity: 0;
   cursor: pointer;
+  background-color: #1c1c1c;
+  height: 100vh;
+  overflow: auto;
+  text-align: center;
+  padding-top: 40px;
+  @media (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  &__title{
+    font-size: 38px;
+    line-height: 1;
+    font-weight: 400;
+    font-family: "Gotham Pro Medium", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    padding: 0 15px;
+    @media (min-width: 768px) {
+      font-size: 48px;
+    }
+  }
+  &__text{
+    font-size:16px;
+    padding: 0 15px;
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
   &__icon {
     position: absolute;
     right: 15px;
     top: 15px;
     svg {
       fill: #ffffff;
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
+      @media (min-width: 768px) {
+        width: 25px;
+        height: 25px;
+      }
     }
   }
 }

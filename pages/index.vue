@@ -24,8 +24,7 @@ export default {
       title: "Layout",
       meta: [
         {
-          name: "description",
-          content: "My Custom Description",
+          name: "Layut",
         },
       ],
     };

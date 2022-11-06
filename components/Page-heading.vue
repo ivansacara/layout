@@ -38,6 +38,7 @@ export default {
   }
   &__title{
     font-size: 32px;
+    font-family: "Gotham Pro Light", sans-serif;
     font-weight: 400;
     line-height: 1;
     margin: 0;
