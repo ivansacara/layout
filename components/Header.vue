@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header__main">
-      <div class="header__main-top">
+      <div class="header__main-top" >
         <a class="header__phone-link header__phone-link--mobile" href="tel:+37379187494">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
             <path
@@ -74,19 +74,17 @@ export default {
   methods: {
     closeNavigation() {
       document.body.classList.remove("navIsOpened");
-      // GlobalEventEmitter.$emit('burger-overlay-nav-close', {})
     },
   },
-  // created() {
-  //   GlobalEventEmitter.$on('nav-toggleShow', () => {
-  //     this.isActive = !this.isActive;
-  //     // document.body.classList.toggle("navIsOpened");
-  //   })
-  //   GlobalEventEmitter.$on('nav-removeClass', () => {
-  //     this.isActive = !this.isActive;
-  //     // document.body.classList.toggle("navIsOpened");
-  //   })
-  // },
+
+  mounted() {
+    GlobalEventEmitter.$on('header-add-class', (event) => {
+      document.querySelector('.header__main-top').classList.add(event);
+    })
+    GlobalEventEmitter.$on('header-remove-class', (event) => {
+      document.querySelector('.header__main-top').classList.remove(event);
+    })
+  },
 };
 </script>
 
@@ -107,7 +105,9 @@ export default {
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #5b5754;
+    &.hasBorder {
+      border-bottom: 1px solid #5b5754;
+    }
     @media (min-width: 768px) {
       padding-top: 35px;
       padding-bottom: 25px;

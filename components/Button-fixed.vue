@@ -4,7 +4,6 @@
 
 
 <script>
-
 export default {
   name: "ButtonFixed",
   data() {
@@ -13,9 +12,10 @@ export default {
     }
   },
 
+
   methods: {
     openForm(){
-      document.body.classList.add("formIsOpened");
+      this.$chatra('openChat')
     }
   },
 };

@@ -51,7 +51,7 @@
 
 <script>
 export default {
-  name: "Post",
+  name: "Posts",
   props:{
     enabled: {type: Boolean, default: false}
   }

@@ -15,6 +15,13 @@
   </div>
 </template>
 
+<script>
+
+export default {
+  name: "Before-After-Component",
+};
+</script>
+
 <style lang="scss">
 .before-after {
 

@@ -12,7 +12,7 @@
       <p class="pop-up-form__text">{{ $t('popUpForm.textBottom') }}</p>
       <ContactForm />
     </div>
-    <Header  />
+    <Header/>
       <main>
         <ButtonFixed />
         <Nuxt />
@@ -23,31 +23,48 @@
 </template>
 <script>
 import { GlobalEventEmitter } from '/utils/globalEventEmitter';
+import json from '../static/chatra.json'
 
 export default {
   name: "default",
+  data () {
+      return {
+        lang: '',
+        chatraJson: json,
+      }
+  },
 
-  // data() {
-  //   return {
-  //     isActive: false,
-  //   }
-  // },
   methods: {
     overlayClicked() {
       document.body.classList.remove('navIsOpened');
       document.body.classList.remove('formIsOpened');
-      // this.isActive = !this.isActive;
-      // GlobalEventEmitter.$emit('burger-removeClass', {})
-      // GlobalEventEmitter.$emit('nav-removeClass', {})
-      // GlobalEventEmitter.$emit('form-removeShow', {})
-
     },
+    chatra(lang = 'en') {
+      if (lang === 'ro') {
+        lang = 'it'
+      }
+      if (process.browser) {
+        window.ChatraSetup = {
+          customWidgetButton: '.custom-chat-button',
+          language: lang,
+          locale: this.chatraJson,
+        }
+      }
+    }
   },
-  // created() {
-  //   GlobalEventEmitter.$on('overlay-toggleShow', () => {
-  //     this.isActive = !this.isActive;
-  //   })
-  // },
+  created() {
+    if (process.browser) {
+      this.lang = window.localStorage.getItem("LANGUAGE");
+    }
+    this.chatra(this.lang);
+
+      GlobalEventEmitter.$on('lang-changed', (lang) => {
+
+        this.chatra(lang);
+        window.Chatra('restart')
+
+      })
+  }
 };
 
 </script>

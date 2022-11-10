@@ -3,8 +3,8 @@
     <PageHeading :title=title />
     <div class="container">
       <div class="before-after-page__content">
-        <BeforeAfter />
-        <BeforeAfter />
+        <BeforeAfterComponent />
+        <BeforeAfterComponent />
         <ShowMoreBtn />
       </div>
     </div>

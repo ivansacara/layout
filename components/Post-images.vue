@@ -16,6 +16,11 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "Post-images",
+}
+</script>
 
 <style lang="scss">
 

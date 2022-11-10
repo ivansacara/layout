@@ -72,6 +72,9 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     [
+      'nuxt-chatra-module'
+    ],
+    [
       "@nuxtjs/yandex-metrika",
 
     ],
@@ -110,6 +113,7 @@ export default {
           cookieKey: "i18n_redirected",
           redirectOn: "root",
         },
+
       },
     ],
     [
@@ -130,8 +134,13 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: [({ isLegacy }) => isLegacy && 'nuxt-chatra-module'],
+  },
 
+  chatra: {
+    id: 'DK65oECdyXFxaTMBR',
+  },
   router: {
     scrollBehavior: function (to, from, savedPosition) {
       return savedPosition

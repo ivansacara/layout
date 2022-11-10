@@ -15,13 +15,13 @@
 
 <script>
 
-
+import {GlobalEventEmitter} from "@/utils/globalEventEmitter";
 export default {
   name: "IndexPage",
 
   head() {
     return {
-      title: "Layout",
+      title: "Layout main",
       meta: [
         {
           name: "Layut",
@@ -29,6 +29,14 @@ export default {
       ],
     };
   },
+
+  mounted() {
+    GlobalEventEmitter.$emit('header-add-class','hasBorder' );
+  },
+
+  beforeDestroy() {
+    GlobalEventEmitter.$emit('header-remove-class','hasBorder' );
+  }
 
 };
 </script>

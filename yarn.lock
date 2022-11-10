@@ -5908,6 +5908,11 @@ num2fraction@^1.2.2:
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha512-Y1wZESM7VUThYY+4W+X4ySH2maqcA+p7UR+w8VWNWVAd6lwuXXWz/w/Cz43J/dI2I+PS6wD5N+bJUF+gjWvIqg==
 
+nuxt-chatra-module@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/nuxt-chatra-module/-/nuxt-chatra-module-4.0.1.tgz#978f853f9a22942027f9593605f97957345936bc"
+  integrity sha512-/h/hMBhXlk0d97LyoaAMFF0OdNVnsdVWJ+7bo++/JMlrpu4tc1Xauh5kHrkATdhhMGQX2dY5IzpiH68bkLjXaA==
+
 nuxt-mail@^3.0.23:
   version "3.0.23"
   resolved "https://registry.yarnpkg.com/nuxt-mail/-/nuxt-mail-3.0.23.tgz#8429678f416ac598c3c976b1de5000d1c5f3708a"

@@ -2,6 +2,11 @@
   <button class="show-more-btn">{{ $t('showMoreBtn.text') }}</button>
 </template>
 
+<script>
+export default {
+  name: "Show-more-btn",
+}
+</script>
 <style lang="scss">
 .show-more-btn {
   padding: 20px 30px;

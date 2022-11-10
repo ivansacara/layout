@@ -2,6 +2,12 @@
   <nuxt-link :to="localePath('/portfolio')" class="show-more-btn">{{ $t('showMoreBtn.text') }}</nuxt-link>
 </template>
 
+<script>
+export default {
+  name: "Show-more-link",
+}
+</script>
+
 <style lang="scss">
 .show-more-btn {
   padding: 20px 30px;

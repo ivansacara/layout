@@ -46,16 +46,6 @@ export default {
           })
         document.body.classList.remove('formIsOpened');
       }
-      // fetch(`https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.chat_id}&text=${messageInTelegram}&parse_mode=html`,)
-      //   .then(response => {
-      //         this.name = "";
-      //         this.email = "";
-      //         this.phone = "";
-      //         this.message ="";
-      //   })
-      //   .catch(error => {
-      //     console.log(error)
-      //   })
     },
 
   }
@@ -104,6 +94,7 @@ export default {
   &__button{
     text-transform: uppercase;
     font-size: 18px;
+    font-family: "Gotham Pro Light", sans-serif;
     line-height: 0.9;
     color: #ffffff;
     border: 1px solid #ffffff;
