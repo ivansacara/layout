@@ -38,9 +38,9 @@ export default {
     bottomText: "Dacă doriți să comandați un proiect, vă rugăm să completați formularul de comandă."
   },
   popUpForm: {
-    title: "Оставьте заявку",
-    textTop: "Хотите получить бесплатную консультация или заказать проект?",
-    textBottom: "Менеджер связиться с Вами с ближайшее время."
+    title: "Lasă o cerere",
+    textTop: "Doriți să obțineți o consultație gratuită sau să comandați un proiect?",
+    textBottom: "Managerul vă va contacta cât mai curând posibil."
   },
   contactForm: {
     name:"Nume",

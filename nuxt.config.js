@@ -142,8 +142,8 @@ export default {
     id: 'DK65oECdyXFxaTMBR',
   },
   router: {
-    scrollBehavior: function (to, from, savedPosition) {
-      return savedPosition
-    }
+    // scrollBehavior: function (to, from, savedPosition) {
+    //   return savedPosition
+    // }
   },
 };

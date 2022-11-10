@@ -1,6 +1,7 @@
 <template>
   <div class="posts__items post__items">
     <div class="posts__items post__items">
+
       <div class="post__item">
         <nuxt-link to="#" class="post__item-inner">
           <span class="post__item-name"></span>
@@ -72,6 +73,7 @@ export default {
   &__item {
     flex: 0 0 100%;
     padding: 5px;
+    cursor: pointer;
 
     @media (min-width: 768px) {
       max-width: 50%;

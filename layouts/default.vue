@@ -177,15 +177,16 @@ a {
   transition: all 0.9s;
   visibility: hidden;
   opacity: 0;
-  cursor: pointer;
   background-color: #1c1c1c;
-  height: 100vh;
   overflow: auto;
   text-align: center;
   padding-top: 40px;
   @media (min-width: 768px) {
     padding-top: 100px;
     padding-bottom: 50px;
+  }
+  @media (max-width: 768px) {
+    height: 100vh;
   }
   &__title{
     font-size: 38px;
@@ -214,6 +215,7 @@ a {
       fill: #ffffff;
       width: 20px;
       height: 20px;
+      cursor: pointer;
       @media (min-width: 768px) {
         width: 25px;
         height: 25px;
