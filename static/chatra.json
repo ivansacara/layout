@@ -3,17 +3,17 @@
     "welcome": {
       "en": "We are here to help!",
       "ru": "Мы рады помочь!",
-      "it": "Siamo qui per aiutare!"
+      "it": "Suntem bucuroși să vă ajutăm!"
     },
     "chatWithUs": {
       "en": "Chat with us, we are online!",
       "ru": "Напишите нам, мы онлайн!",
-      "it": "Chatta con noi, siamo online!"
+      "it": "Scrie-ne! Suntem online!"
     },
     "leaveUsAMessage": {
       "en": "Message us",
       "ru": "Напишите нам",
-      "it": "Inviaci un messaggio"
+      "it": "Scrie-ne!"
     },
     "mobile_chatWithUs": {
       "en": "Chat",
@@ -23,82 +23,82 @@
     "mobile_leaveUsAMessage": {
       "en": "Message",
       "ru": "Сообщение",
-      "it": "Messaggio"
+      "it": "Mesaj"
     },
     "offlineNote": {
       "en": "Ask us anything – we’ll get back to you here or by email.",
       "ru": "Задайте вопрос — мы ответим на почту или здесь.",
-      "it": "Chiedici qualsiasi cosa – ti risponderemo qui o via email."
+      "it": "Puneți o întrebare. Vă vom răspunde prin email sau aici."
     },
     "bot_thanksForMessage": {
       "en": "Thanks for your message!",
       "ru": "Спасибо за сообщение!",
-      "it": "Grazie per il tuo messaggio!"
+      "it": "Multumim pentru mesaj!"
     },
     "bot_startOnline": {
       "en": "The team will reply as soon as possible.",
       "ru": "Вам ответят в ближайшее время.",
-      "it": "Il team risponderà appena possibile."
+      "it": "Vi se va răspunde în cel mai scurt timp posibil."
     },
     "bot_startOnline_email": {
       "en": "The team will reply as soon as possible here or by email ({{#email}})",
       "ru": "Вам ответят в ближайшее время здесь или по электронной почте ({{#email}})",
-      "it": "Il team risponderà il prima possibile qui o via email ({{#email}})"
+      "it": "Vi se va răspunde în cel mai scurt timp posibil prin email sau aici ({{#email}})"
     },
     "bot_startOnline_required": {
       "en": "Introduce yourself to deliver your message. The team will reply as soon as possible.",
       "ru": "Представьтесь, чтобы доставить сообщение. Вам ответят в ближайшее время.",
-      "it": "Presentati e invia il tuo messaggio. Il team risponderà appena possibile."
+      "it": "Prezentați-vă pentru a transmite un mesaj. Vi se va răspunde în cel mai scurt timp posibil."
     },
     "bot_startOffline": {
       "en": "The team will get back to you soon.",
       "ru": "Вам обязательно ответят.",
-      "it": "Il team al momento è offline, ma si metterà in contatto con te appena possibile."
+      "it": "Cu siguranță veți primi un răspuns."
     },
     "bot_startOffline_email": {
       "en": "The team will get back to you soon here or by email ({{#email}})",
       "ru": "Вам обязательно ответят здесь или по электронной почте ({{#email}})",
-      "it": "Il team al momento è offline, ma si metterà in contatto con te appena possibile qui o via email ({{#email}})"
+      "it": "Cu siguranță veți primi un răspuns prin email sau aici ({{#email}})"
     },
     "bot_startOffline_required": {
       "en": "Introduce yourself to deliver your message. The team will get back to you soon.",
       "ru": "Представьтесь, чтобы доставить сообщение. Вам обязательно ответят.",
-      "it": "Il team al momento è offline, presentati e invia il tuo messaggio:"
+      "it": "Prezentați-vă pentru a transmite un mesaj. Cu siguranță veți primi un răspuns."
     },
     "bot_beforeForm": {
       "en": "Please introduce yourself:",
       "ru": "Представьтесь, пожалуйста:",
-      "it": "Per favore presentati:"
+      "it": "Vă rugăm să vă prezentați:"
     },
     "bot_afterForm": {
       "en": "Thanks!",
       "ru": "Спасибо!",
-      "it": "Grazie!"
+      "it": "Mulțumesc!"
     },
     "bot_afterForm_email": {
       "en": "Thanks, you’ll get a reply here or by email.",
       "ru": "Спасибо! Вы получите ответ по электронной почте или здесь.",
-      "it": "Grazie, riceverai una risposta qui o via email."
+      "it": "Mulțumesc! Veți primi un răspuns prin email sau aici."
     },
     "bot_details": {
       "en": "Consider adding any details that might help the team to answer your question.",
       "ru": "Вы можете уточнить ваш запрос, чтобы помочь операторам ответить вам наиболее полно.",
-      "it": "Non esitare ad aggiungere maggiori dettagli per aiutare il team a rispondere alla tua domanda."
+      "it": "Adăugați orice informații suplimentare care pot ajuta operatorii să vă răspundă cât mai complet."
     },
     "bot_checkbox": {
       "en": "I agree to the Terms of Service and Privacy Policy of this website",
       "ru": "Ставя отметку, я подтверждаю согласие на обработку моих персональных данных (закон №152-ФЗ «О персональных данных»)",
-      "it": "Accetto i Termini di servizio e l’Informativa sulla privacy di questo sito Web"
+      "it": "Confirm că sunt de acord cu prelucrarea datelor mele cu caracter personal"
     },
     "bot_marketingConsent": {
       "en": "I would like to subscribe to updates from you",
       "ru": "Я хочу получать новостную рассылку",
-      "it": "Voglio iscrivermi agli aggiornamenti"
+      "it": "Vreau să primesc știri și promoții"
     },
     "scriptEndText": {
       "en": "Message us if you need further assistance, and I will connect you to a team member.",
       "ru": "Отправьте нам сообщение, если у вас остались какие-то вопросы, и я соединю вас с оператором.",
-      "it": "Mandaci un messaggio se desideri ulteriore assistenza, e ti collegherò ad un membro dello staff."
+      "it": "Au rămas întrebari? Trimite-ne un mesaj."
     }
   },
   "online": {
@@ -109,191 +109,191 @@
   "loading": {
     "en": "Loading...",
     "ru": "Загружаю...",
-    "it": "Caricamento..."
+    "it": "Se încarcă..."
   },
   "chat": {
     "empty": {
       "en": "Nothing here",
       "ru": "Здесь ещё ничего нет",
-      "it": "Niente qui"
+      "it": "Nimic aici"
     },
     "input": {
       "placeholder": {
         "en": "Message...",
         "ru": "Сообщение...",
-        "it": "Messaggio..."
+        "it": "Mesaj..."
       },
       "oneMore": {
         "en": "One more message...",
         "ru": "Eщё одно сообщение...",
-        "it": "Ancora un messaggio..."
+        "it": "Încă un mesaj..."
       },
       "notIntroduced": {
         "en": "You haven’t introduced yourself",
         "ru": "Вы ещё не представились",
-        "it": "Non ti sei presentato"
+        "it": "Nu v-aţi prezentat"
       },
       "reply": {
         "en": "Reply to {{#name}}...",
         "ru": "Ответить...",
-        "it": "Rispondi..."
+        "it": "Răspundeți..."
       }
     },
     "send": {
       "en": "Send",
       "ru": "Отправить",
-      "it": "Invia"
+      "it": "Trimiteți"
     },
     "messagesCount": {
       "en": "{{#count}} {{plural:#count,message,messages}}",
       "ru": "{{#count}} {{plural:#count,сообщение,сообщения,сообщений}}",
-      "it": "{{#count}} {{plural:#count,messaggio,messaggi}}"
+      "it": "{{#count}} {{plural:#count,mesaj,mesaj}}"
     },
     "noMessages": {
       "en": "No messages",
       "ru": "Нет сообщений",
-      "it": "Nessun messaggio"
+      "it": "Nu sunt mesaje"
     },
     "newMessage": {
       "en": "New message",
       "ru": "Новое сообщение",
-      "it": "Nuovo messaggio"
+      "it": "Mesaj nou"
     },
     "retrievingHistory": {
       "en": "Retrieving history...",
       "ru": "Загружаю историю...",
-      "it": "Recuperando la cronologia..."
+      "it": "RSe încarcă istoria..."
     },
     "more": {
       "en": "More...",
       "ru": "Ещё...",
-      "it": "Più..."
+      "it": "Mai mult..."
     },
     "loading": {
       "en": "Loading...",
       "ru": "Загружаю...",
-      "it": "Caricamento..."
+      "it": "Se încarcă..."
     },
     "introduce": {
       "en": "Please introduce yourself",
       "ru": "Представьтесь, пожалуйста",
-      "it": "Per favore, presentati"
+      "it": "Vă rugăm să vă prezentați"
     },
     "rate": {
       "en": "Rate the conversation",
       "ru": "Оценить диалог",
-      "it": "Vota la conversazione"
+      "it": "Evaluați dialogul"
     },
     "insertEmoji": {
       "en": "Insert emoji",
       "ru": "Добавить эмоджи",
-      "it": "Inserire emoji"
+      "it": "Adăugați emoji"
     }
   },
   "name": {
     "ru": "Имя",
     "en": "Name",
-    "it": "Nome"
+    "it": "Nume"
   },
   "yourName": {
     "en": "Your name",
     "ru": "Ваше имя",
-    "it": "Tuo nome"
+    "it": "Numele dvs."
   },
   "email": {
     "ru": "Электронная почта",
     "en": "Email",
-    "it": "E-mail"
+    "it": "Email"
   },
   "phone": {
     "ru": "Номер телефона",
     "en": "Phone number",
-    "it": "Numero di telefono"
+    "it": "Număr de telefon"
   },
   "message": {
     "ru": "Сообщение",
     "en": "Message",
-    "it": "Messaggio"
+    "it": "Mesaj"
   },
   "submit": {
     "en": "Submit",
     "ru": "Отправить",
-    "it": "Salvare"
+    "it": "Trimiteți"
   },
   "saved": {
     "en": "Saved",
     "ru": "Сохранено",
-    "it": "Salvato"
+    "it": "Salvat"
   },
   "change": {
     "en": "Change",
     "ru": "Изменить",
-    "it": "Cambiare"
+    "it": "Schimbați"
   },
   "cancel": {
     "en": "Cancel",
     "ru": "Отменить",
-    "it": "Cancellare"
+    "it": "Anulați"
   },
   "messageTypes": {
     "welcome": "welcome",
     "joinedFirst": {
       "en": "joined",
       "ru": "теперь в чате",
-      "it": "Si è unito alla chat"
+      "it": "acum în chat"
     },
     "joined": {
       "en": "{{#username}} joined",
       "ru": "{{#username}} снова в чате",
-      "it": "{{#username}} si è unito alla chat"
+      "it": "{{#username}} a intrat în chat"
     },
     "left": {
       "en": "{{#username}} left",
       "ru": "{{#username}} не в чате",
-      "it": "{{#username}} ha lasciato la chat"
+      "it": "{{#username}} nu este în chat"
     },
     "agentsOffline": {
       "en": "Agents are offline",
       "ru": "Все операторы оффлайн",
-      "it": "Gli agenti sono offline"
+      "it": "Operatorii sunt offline"
     },
     "ratedChat": {
       "en": "Conversation rated",
       "ru": "Вы оценили диалог",
-      "it": "Conversazione valutata"
+      "it": "Conversație este evaluată\n"
     }
   },
   "agent": {
     "en": "Agent",
     "ru": "Оператор",
-    "it": "Agente"
+    "it": "Operator"
   },
   "typing": {
     "en": "is typing",
     "ru": "печатает",
-    "it": "sta scrivendo"
+    "it": "scrie"
   },
   "areTyping": {
     "en": "are typing",
     "ru": "печатают",
-    "it": "stanno scrivendo"
+    "it": "scriu"
   },
   "minimize": {
     "en": "Minimize",
     "ru": "Свернуть",
-    "it": "Minimizza"
+    "it": "Minimizați "
   },
   "date": {
     "month": {
       "full": {
         "en": "January_February_March_April_May_June_July_August_September_October_November_December",
         "ru": "января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря",
-        "it": "Gennaio_Febbraio_Marzo_Aprile_Maggio_Giugno_Luglio_Agosto_Settembre_Ottobre_Novembre_Dicembre"
+        "it": "ianuarie_februarie_martie_aprilie_mai_iunie_iulie_august_septembrie_octombrie_noiembrie_decembrie"
       },
       "short": {
         "en": "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec",
         "ru": "янв_фев_мар_апр_мая_июня_июля_авг_сен_окт_ноя_дек",
-        "it": "Gen_Feb_Mar_Apr_Mag_Giu_Lug_Ago_Set_Ott_Nov_Dec"
+        "it": "Ian_Feb_Mar_Apr_Mai_Iun_Iul_Aug_Sep_Oct_Noi_Dec"
       }
     },
     "am": {
@@ -304,27 +304,27 @@
     "moment": {
       "en": "a moment ago",
       "ru": "только что",
-      "it": "un momento fa"
+      "it": "recent"
     },
     "minute": {
       "en": "{{#count}} {{plural:#count,minute,minutes}} ago",
       "ru": "{{#count}} {{plural:#count,минуту,минуты,минут}} назад",
-      "it": "{{#count}} {{plural:#count,minuto,minuti}} fa"
+      "it": "{{#count}} {{plural:#count,un minut ,un minut }} în urmă"
     },
     "hour": {
       "en": "{{#count}} {{plural:#count,hour,hours}} ago",
       "ru": "{{#count}} {{plural:#count,час,часа,часов}} назад",
-      "it": "{{#count}} {{plural:#count,ora,ore}} fa"
+      "it": "{{#count}} {{plural:#count,o oră, o oră}} în urmă"
     },
     "day": {
       "en": "{{#count}} {{plural:#count,day,days}} ago",
       "ru": "{{#count}} {{plural:#count,день,дня,дней}} назад",
-      "it": "{{#count}} {{plural:#count,giorno,giorni}} fa"
+      "it": "{{#count}} {{plural:#count,zi, zile}} în urmă"
     },
     "today": {
       "en": "Today",
       "ru": "Сегодня",
-      "it": "Oggi"
+      "it": "Azi"
     },
     "yesterday": {
       "en": "Yesterday",
@@ -364,12 +364,12 @@
     "connecting": {
       "en": "Reconnecting...",
       "ru": "Подключаюсь... ",
-      "it": "Riconnettendo..."
+      "it": "Conectez..."
     },
     "failed": {
       "en": "Failed to connect",
       "ru": "Нет соединения",
-      "it": "Connessione fallita"
+      "it": "Nu este conectare"
     },
     "offline": {
       "en": "Offline",
@@ -379,7 +379,7 @@
     "retry": {
       "en": "Reconnect",
       "ru": "Подключиться",
-      "it": "Riconnettersi"
+      "it": "Reconectați"
     }
   },
   "smile": {
@@ -389,7 +389,7 @@
     "weird": {
       "en": "Weird error :-/",
       "ru": "Что-то тут не то :-/",
-      "it": "Errore strano :-/"
+      "it": "Eroare :-/"
     },
     "incorrectEmail": {
       "en": "Incorrect email",
@@ -399,45 +399,45 @@
     "emptyEmail": {
       "en": "Empty email field",
       "ru": "Электронная почта не введена",
-      "it": "Sezione email vuota"
+      "it": "Nu ați adaugat email"
     },
     "emptyMessage": {
       "en": "Write something",
       "ru": "Напишите что-нибудь",
-      "it": "Scrivi qualcosa"
+      "it": "Scrieți ceva"
     },
     "denied": {
       "en": "Access denied",
       "ru": "Нет доступа",
-      "it": "Accesso negato"
+      "it": "Nu aveți accesul"
     },
     "formNotDone": {
       "en": "The form has not been completed",
       "ru": "Форма не заполнена",
-      "it": "Il form non è stato completato"
+      "it": "Forma nu este completată"
     }
   },
   "and": {
     "en": "and",
     "ru": "и",
-    "it": "e"
+    "it": "și"
   },
   "close": {
     "en": "Сlose",
     "ru": "Закрыть",
-    "it": "Chiudere"
+    "it": "Închideți"
   },
   "requiredField": {
     "en": "Required field",
     "ru": "Обязательное поле",
-    "it": "Campo obbligatorio"
+    "it": "Câmp obligatoriu"
   },
   "_chatra": {
     "logo": "Chatra",
     "phrase": {
       "en": "We run on",
       "ru": "Мы используем",
-      "it": "Operiamo su"
+      "it": "Noi folosim"
     },
     "chatra": {
       "en": "Chatra",
@@ -448,47 +448,47 @@
   "messageSent": {
     "en": "Message sent!",
     "ru": "Сообщение отправлено!",
-    "it": "Messaggio inviato!"
+    "it": "Mesajul este trimis!"
   },
   "active": {
     "en": "Active",
     "ru": "Активность —",
-    "it": "Attivo"
+    "it": "Activ"
   },
   "activeShort": {
     "en": "Active less than an hour ago",
     "ru": "Активность — меньше часа назад",
-    "it": "Attivo meno di un’ora fa"
+    "it": "A fost activ mai puțin de 1 ora în urmă"
   },
   "activeLong": {
     "en": "Active some time ago",
     "ru": "Активность — недавно",
-    "it": "Attivo un po’ di tempo fa"
+    "it": "Recent"
   },
   "sending": {
     "en": "sending...",
     "ru": "отправка...",
-    "it": "inviando..."
+    "it": "trimiterea..."
   },
   "sent": {
     "en": "delivered",
     "ru": "доставлено",
-    "it": "consegnato"
+    "it": "trimis"
   },
   "unsent": {
     "en": "unsent, please introduce yourself",
     "ru": "представьтесь, чтобы отправить",
-    "it": "non inviato, per favore presentati"
+    "it": "vă rugăm să vă prezentați"
   },
   "notSeen": {
     "en": "not seen",
     "ru": "не просмотрено",
-    "it": "non visto"
+    "it": "nevizionat"
   },
   "seen": {
     "en": "seen",
     "ru": "просмотрено",
-    "it": "visto"
+    "it": "vizionat"
   },
   "units": {
     "b": {
@@ -515,61 +515,61 @@
   "dropToUpload": {
     "en": "Drop here to attach",
     "ru": "Поместите сюда, чтобы прикрепить",
-    "it": "Rilascia qui per allegare"
+    "it": "Adăugați aici pentru a atașa"
   },
   "uploadFile": {
     "en": "Attach a file",
     "ru": "Прикрепить файл",
-    "it": "Allega un file"
+    "it": "Atașați file-ul"
   },
   "uploadFailed": {
     "en": "Upload failed",
     "ru": "Ошибка загрузки",
-    "it": "Caricamento fallito"
+    "it": "Eroare"
   },
   "maximumFileSize": {
     "en": "Maximum file size is {{#size}} MB",
     "ru": "Максимальный размер файла — {{#size}} МБ",
-    "it": "Le dimensioni massime del file sono {{#size}} MB"
+    "it": "Dimensiunea maximă a fișierului {{#size}} MB"
   },
   "comment": {
     "en": "Comment",
     "ru": "Комментарий",
-    "it": "Commento"
+    "it": "Comentariu"
   },
   "rateConversation": {
     "en": "Rate the conversation",
     "ru": "Оцените диалог",
-    "it": "Valuta la conversazione"
+    "it": "Evaluați dialogul"
   },
   "rate": {
     "en": "Rate",
     "ru": "Оценить",
-    "it": "Votare"
+    "it": "Evaluați"
   },
   "update": {
     "en": "Update",
     "ru": "Обновить",
-    "it": "Aggiornare"
+    "it": "Refresh"
   },
   "optional": {
     "en": "optional",
     "ru": "необязательно",
-    "it": "opzionale"
+    "it": "opțional"
   },
   "whoToChatWith": {
     "en": "Who do you wish to chat with?",
     "ru": "С кем хотите начать чат?",
-    "it": "Con chi desideri chattare?"
+    "it": "Cu cine vreți să discutați?"
   },
   "notSure": {
     "en": "Not sure",
     "ru": "Неважно",
-    "it": "Non sono sicuro"
+    "it": "Nu contează"
   },
   "restart": {
     "en": "Restart",
     "ru": "Перезапустить",
-    "it": "Riavvio"
+    "it": "Restart"
   }
 }
