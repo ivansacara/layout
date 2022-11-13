@@ -149,6 +149,13 @@ a {
 
 .soc__link {
   padding: 0 7px;
+  svg {
+    transition: all 0.3s;
+    &:hover,
+    &:focus {
+      fill: #888888;
+    }
+  }
 }
 
 .soc__img {

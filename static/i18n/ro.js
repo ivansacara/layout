@@ -5,7 +5,7 @@ export default {
     en: 'en',
   },
   header: {
-    main: "Principala",
+    main: "Acasă",
     services: "Servicii",
     portfolio: "Proiecte",
     beforeAfter: "Înainte/După",
@@ -27,14 +27,14 @@ export default {
     text_2: "scrie-ne"
   },
   showMoreBtn: {
-    text: "Afișați mai multe"
+    text: "Vezi toate proiectele"
   },
   mainPage: {
     title: "ARHITECTURA | DESIGN INTERIOR",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel mauris sed massa molestie dignissim. Cras dictum, tortor id luctus faucibus, nulla libero congue quam, at malesuada nunc nunc ac augue. Donec dictum pellentesque placerat. Etiam felis mauris, finibus eu volutpat non, malesuada in sapien. Suspendisse potenti. Ut varius lectus ac ante convallis porta. Ut ullamcorper ut odio eget tempus. Donec sagittis, est in faucibus gravida, ugue augue luctus libero, eu finibus augue arcu a dui. In urna elit, tristique vel urna nec, euismod rutrum massa. Curabitur porttitor sagittis enim, eu cursus orci hendrerit in. Donec in augue urna. Praesent lobortis augue ut quam lobortis feugiat at nec ligula. Sed blandit pellentesque venenatis. Proin sit amet lacinia sapien, a rutrum sapien. Suspendisse mollis, velit sed porttitor molestie, lectus metus semper leo, vel lacinia orci lorem quis nisi. Donec rutrum mauris vitae rhoncus condimentum."
   },
   contactsPage: {
-    topText:"Dacă aveți întrebări, vă rugăm să ne contactați la telefon:",
+    topText:"Dacă aveți întrebări, vă rugăm să ne contactați:",
     bottomText: "Dacă doriți să comandați un proiect, vă rugăm să completați formularul de comandă."
   },
   popUpForm: {
@@ -56,7 +56,7 @@ export default {
   },
   servicesPage: {
     title: "COMANDA UN PROIECT",
-    subTitleTop:"Lasă o cerere",
-    subTitleBottom:"Managerul vă va contacta în scurt timp",
+    subTitleTop:"Depune cererea",
+    subTitleBottom:"În scurt timp managerul nostru vă va contacta",
   }
 }
