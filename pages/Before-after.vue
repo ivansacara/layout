@@ -4,7 +4,7 @@
     <div class="container">
       <div class="before-after-page__content">
         <BeforeAfterComponent v-for="(item, index) of posts"  v-bind:key="index" :beforeAfter="item"/>
-        <ShowMoreBtn :eventName="eventName" />
+        <ShowMoreBtn :eventName="eventName" :isLoading="isLoading"/>
       </div>
     </div>
   </div>
@@ -98,7 +98,7 @@ export default {
 
           this.posts = [...this.posts, ...newPosts];
           this.page++;
-          this.isLoading = true;
+          this.isLoading = false;
         })
         .catch(console.error);
     }
