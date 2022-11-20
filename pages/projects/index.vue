@@ -11,7 +11,7 @@
 import { createClient } from "~/plugins/contentful.js";
 import {GlobalEventEmitter} from "@/utils/globalEventEmitter";
 const client = createClient();
-const POST_PER_PAGE = 6;
+const POST_PER_PAGE = 12;
 
 export default {
   name:"Portfolio",

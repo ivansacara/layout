@@ -15,7 +15,7 @@ import { createClient } from "~/plugins/contentful.js";
 import {GlobalEventEmitter} from "@/utils/globalEventEmitter";
 
 const client = createClient();
-const POST_PER_PAGE = 1;
+const POST_PER_PAGE = 6;
 export default {
   name:"Before-After",
   head() {
