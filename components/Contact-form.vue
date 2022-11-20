@@ -68,9 +68,8 @@ export default {
   }
   &__label{
     font-size: 18px;
-    font-family: "Gotham Pro Light", sans-serif;
     line-height: 1;
-    font-weight: 400;
+    font-weight: 300;
     margin-bottom: 5px;
     @media (min-width: 576px) {
       font-size: 24px;
@@ -94,7 +93,7 @@ export default {
   &__button{
     text-transform: uppercase;
     font-size: 18px;
-    font-family: "Gotham Pro Light", sans-serif;
+    font-weight: 300;
     line-height: 0.9;
     color: #ffffff;
     border: 1px solid #ffffff;

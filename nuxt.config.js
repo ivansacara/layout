@@ -23,22 +23,27 @@ export default {
       ],
       link: [
         {
-          href: "/logo.png",
+          href: "/logo.svg",
           rel: "shortcut icon",
         },
         {
-          href: "/logo.png",
+          href: "/logo.svg",
           rel: "icon",
-          type: "image/png",
+          type: "image/svg",
           sizes: "32x32",
         },
         {
-          href: "/logo.png",
+          href: "/logo.svg",
           rel: "icon",
           type: "image/png",
           sizes: "16x16",
         },
+        {
+          href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" ,
+          rel: "stylesheet",
+        },
         ...i18nHead.link,
+
       ],
       script: [],
     };
@@ -47,18 +52,14 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
-  // env: {
-  //   CTF_SPACE_ID: configContentful.CTF_SPACE_ID,
-  //   CTF_CDA_ACCESS_TOKEN: configContentful.CTF_CDA_ACCESS_TOKEN,
-  //   CTF_PERSON_ID: configContentful.CTF_PERSON_ID,
-  //   CTF_BLOG_POST_TYPE_ID: configContentful.CTF_BLOG_POST_TYPE_ID,
-  //
-  //   LANGS: {
-  //     ru: "ru-MD",
-  //     ro: "ro-MD",
-  //     en: "en-EN"
-  //   },
-  // },
+  env: {
+    CTF_SPACE_ID: "ylxy9hn813el",
+    CTF_CDA_ACCESS_TOKEN: "vaTFetgNoyh2zpe5ffQ-5g74p0t8CHFCNMn4zJ9WDoE",
+
+    LANGS: {
+      en: "en-EN"
+    },
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: "~/plugins/vue-swiper.js", mode: "client" }],

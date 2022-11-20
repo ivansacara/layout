@@ -2,50 +2,15 @@
   <div class="posts__items post__items">
     <div class="posts__items post__items">
 
-      <div class="post__item">
-        <nuxt-link to="#" class="post__item-inner">
-          <span class="post__item-name"></span>
-          <img src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="post__item-image">
+      <div class="post__item" v-for="item of project">
+        <nuxt-link :to="localePath(`/projects/${item.url}`)" class="post__item-inner">
+          <span class="post__item-name">{{ item.title }}</span>
+          <img :src="item.preview" alt="" class="post__item-image">
         </nuxt-link>
       </div>
 
-      <div class="post__item">
-        <nuxt-link to="#" class="post__item-inner">
-          <span class="post__item-name"></span>
-          <img src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="post__item-image">
-        </nuxt-link>
-      </div>
-
-      <div class="post__item">
-        <nuxt-link to="#" class="post__item-inner">
-          <span class="post__item-name"></span>
-          <img src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="post__item-image">
-        </nuxt-link>
-      </div>
-
-      <div class="post__item">
-        <nuxt-link to="#" class="post__item-inner">
-          <span class="post__item-name"></span>
-          <img src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="post__item-image">
-        </nuxt-link>
-      </div>
-
-      <div class="post__item">
-        <nuxt-link to="#" class="post__item-inner">
-          <span class="post__item-name"></span>
-          <img src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="post__item-image">
-        </nuxt-link>
-      </div>
-
-      <div class="post__item">
-        <nuxt-link to="#" class="post__item-inner">
-          <span class="post__item-name">БЛА БЛА</span>
-          <img src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="post__item-image">
-        </nuxt-link>
-      </div>
     </div>
-    <ShowMoreBtn v-if="!enabled"/>
-    <ShowMoreLink v-if="enabled"/>
+    <ShowMoreBtn :eventName="eventName" :isLoading="isLoading"/>
   </div>
 </template>
 
@@ -53,9 +18,8 @@
 <script>
 export default {
   name: "Posts",
-  props:{
-    enabled: {type: Boolean, default: false}
-  }
+  props:['eventName','project', 'isLoading'],
+
 }
 </script>
 

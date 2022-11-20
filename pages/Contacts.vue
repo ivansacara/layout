@@ -6,7 +6,7 @@
         <p class="contacts-page__text">
           {{ $t('contactsPage.topText') }}
         </p>
-        <a class="contacts-page__phone" href="tel:+37368580787">+373 68 580 787</a>
+        <a class="contacts-page__phone" v-bind:href="'tel:' + $t('phone.number')">{{ $t('phone.number') }}</a>
         <p class="contacts-page__text">
           {{ $t('contactsPage.bottomText') }}
         </p>

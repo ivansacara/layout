@@ -34,7 +34,7 @@ export default {
 }
 .lang {
   font-size: 16px;
-  font-family: "Gotham Pro Light", sans-serif;
+  font-weight: 300;
   text-transform: uppercase;
   position: relative;
 

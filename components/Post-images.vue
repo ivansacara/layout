@@ -3,13 +3,13 @@
 
     <div class="post-images__image-wrap">
       <div class="post-images__image-wrap-inner">
-        <img class="post-images__img" src="../static/img/white_background.jpg" alt="" >
+        <img class="post-images__img" :src="content.imageLeft.fields.file.url" alt="" >
       </div>
     </div>
 
     <div class="post-images__image-wrap">
       <div class="post-images__image-wrap-inner">
-        <img class="post-images__img" src="../static/img/white_background.jpg" alt="" >
+        <img class="post-images__img" :src="content.imageRight.fields.file.url" alt="" >
       </div>
     </div>
 
@@ -19,6 +19,7 @@
 <script>
 export default {
   name: "Post-images",
+  props:['content'],
 }
 </script>
 
@@ -29,9 +30,6 @@ export default {
   margin-left: -5px;
   margin-right: -5px;
   margin-bottom: 10px;
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   @media (min-width: 576px) {
     margin-left: -10px;

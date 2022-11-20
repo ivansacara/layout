@@ -4,66 +4,10 @@
       <div class="container">
         <div class="services-page__content">
           <div class="services-page__description">
-            <div class="services-page__coll service">
-              <h2 class="service__title">Design Interior</h2>
-              <ul class="service__list">
-                <li class="service__list-item">обмерочный план;</li>
-                <li class="service__list-item">рекомендации к проекту;</li>
-                <li class="service__list-item">спецификация внесенных правок в проект;</li>
-                <li class="service__list-item">план демонтажа;</li>
-                <li class="service__list-item">план монтажа;</li>
-                <li class="service__list-item">план после перепланировки;</li>
-                <li class="service__list-item">3D схема квартиры;</li>
-                <li class="service__list-item">мебельный план;</li>
-                <li class="service__list-item">спецификация мебели;</li>
-                <li class="service__list-item">план маркировки углов помещений;</li>
-                <li class="service__list-item">развертка стен помещений;</li>
-                <li class="service__list-item">спецификация сантехнических приборов;</li>
-                <li class="service__list-item">план размещения осветительных приборов;</li>
-                <li class="service__list-item">спецификации освещения и электрооборудования;</li>
-                <li class="service__list-item">план групп света, выключателей, розеток и электровыводов;</li>
-                <li class="service__list-item">план аудио/видео сети;</li>
-                <li class="service__list-item">план вентиляции и кондиционирования;</li>
-                <li class="service__list-item">план потолков; разрезы потолков;</li>
-                <li class="service__list-item">план покрытия полов; разрезы по полам;</li>
-                <li class="service__list-item">план отопления;</li>
-                <li class="service__list-item">спецификация радиаторов;</li>
-                <li class="service__list-item">план заполнения дверных проемов; спецификация дверей.</li>
-              </ul>
+            <div class="services-page__coll service" v-for="service of services">
+              <h2 class="service__title">{{ service.title }}</h2>
+              <div class="service__content" v-html="service.content"></div>
             </div>
-            <div class="services-page__coll service">
-              <h2 class="service__title">Архитектура</h2>
-              <ul class="service__list">
-                <li class="service__list-item">архитектурные решения до 3 вариантов;</li>
-                <li class="service__list-item">фасад;</li>
-                <li class="service__list-item">3D визуализация эскизно;</li>
-                <li class="service__list-item">технико-экономические показатели (ведомость отделки фасадов, спецификация оконных и дверных проемов, площадь озеленения и мощения);</li>
-                <li class="service__list-item">схема застройки (привязка дома к участку на основании топосъемки участка);</li>
-                <li class="service__list-item">план благоустройства.</li>
-              </ul>
-            </div>
-
-            <div class="services-page__coll service">
-              <h2 class="service__title">Ремонтные работы</h2>
-              <ul class="service__list">
-                <li class="service__list-item">архитектурные решения до 3 вариантов;</li>
-                <li class="service__list-item">фасад;</li>
-                <li class="service__list-item">3D визуализация эскизно;</li>
-                <li class="service__list-item">технико-экономические показатели (ведомость отделки фасадов, спецификация оконных и дверных проемов, площадь озеленения и мощения);</li>
-                <li class="service__list-item">схема застройки (привязка дома к участку на основании топосъемки участка);</li>
-                <li class="service__list-item">план благоустройства.</li>
-              </ul>
-            </div>
-
-            <div class="services-page__coll service">
-              <h2 class="service__title">Изготовление мебели</h2>
-              <ul class="service__list">
-                <li class="service__list-item">производство и сборка мягкой мебели (диваны, кресла);</li>
-                <li class="service__list-item">изготовление и сборка корпусной мебели (кухни, шкафы, комоды, кровати и т.д.);</li>
-                <li class="service__list-item">изготовление гардеробных и раздвижных систем.</li>
-              </ul>
-            </div>
-
           </div>
           <div class="services-page__contact">
             <div class="services-page__contact-heading">
@@ -81,6 +25,10 @@
 </template>
 
 <script>
+import { createClient } from "~/plugins/contentful.js";
+
+const client = createClient();
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 export default {
 
   name:"Services",
@@ -98,7 +46,27 @@ export default {
     return {
       title: 'header.services',
     }
-  }
+  },
+
+  async asyncData({ env, i18n }) {
+    return Promise.all([
+      client.getEntries({
+        content_type: "servicePage",
+        order: "-sys.createdAt",
+      }),
+    ])
+      .then(([servicePage]) => {
+        return{
+          services: servicePage.items.map((itemService) => {
+            return {
+              title: itemService.fields[`title_${i18n.locale}`],
+              content: documentToHtmlString(itemService.fields[`content_${i18n.locale}`])
+            }
+          })
+        }
+      })
+      .catch(console.error);
+  },
 }
 </script>
 
@@ -126,9 +94,10 @@ export default {
 
   &__contact-title {
     font-size: 48px;
+    line-height: 1.2;
+    font-weight: 400;
     margin-bottom: 60px;
     text-transform: uppercase;
-    font-family: "Gotham Pro Medium", sans-serif;
 
     @media (max-width: 768px) {
       font-size: 28px;
@@ -179,9 +148,7 @@ export default {
   &__title {
     font-size: 36px;
     line-height: 1.1;
-    font-family: "Gotham Pro Light", sans-serif;
-    margin: 0;
-    padding: 0;
+    font-weight: 300;
     text-align: center;
     padding-bottom: 35px;
     margin-bottom: 35px;
@@ -208,25 +175,24 @@ export default {
     }
   }
 
-  &__list {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-  }
-
-  &__list-item {
-    font-size: 21px;
-    font-family: "Gotham Pro Light", sans-serif;
-    line-height: 1.1;
-
-    @media (max-width: 1500px) {
-      font-size: 21px;
+  &__content {
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
     }
+    li {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.1;
 
-    @media (max-width: 768px) {
-      font-size: 18px;
+      @media (min-width: 992px) {
+        font-size: 18px;
+      }
     }
   }
+
+
 
 }
 </style>

@@ -57,22 +57,6 @@ export default {
   @media (min-width: 768px) {
     display: none;
   }
-  //&.active {
-  //  &::before {
-  //    transform: rotate(45deg);
-  //    top: 8px;
-  //  }
-  //  &::after {
-  //    transform: rotate(-45deg);
-  //    bottom: 8px;
-  //  }
-  //  span {
-  //    display: none;
-  //  }
-  //  .header__main-bottom {
-  //    transform: translateX(0);
-  //  }
-  //}
 }
 
 </style>

@@ -1,10 +1,18 @@
 <template>
-  <button class="show-more-btn">{{ $t('showMoreBtn.text') }}</button>
+    <button class="show-more-btn" :disabled='isLoading'  @click="LoadBefore()">{{ $t('showMoreBtn.text') }}</button>
 </template>
 
 <script>
+import { GlobalEventEmitter } from '/utils/globalEventEmitter';
 export default {
   name: "Show-more-btn",
+  props:['eventName', 'isLoading'],
+
+  methods: {
+    LoadBefore() {
+      GlobalEventEmitter.$emit(this.eventName);
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -17,17 +25,16 @@ export default {
   font-size: 16px;
   line-height: 1;
   display: block;
-  margin: 0 auto;
+  margin: 80px auto 0;
   position: relative;
   cursor: pointer;
   transition: all 0.3s;
   outline: none;
-  margin-top: 80px;
   &:hover,
   &:focus{
-    color: #888888;
     border-color: #888888;
   }
+
 
   &:before {
     content: '';
@@ -42,6 +49,17 @@ export default {
     background-repeat: no-repeat;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='%23ffffff' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
   }
+  &[disabled] {
+    color: #888888;
+    border-color: #888888;
+    cursor: default;
+    &:before {
+      width: 45px;
+      height: 45px;
+      background-image: url("../static/img/loading.gif");
+    }
+
+  }
   @media (min-width: 768px) {
     padding: 25px 50px;
     font-size: 20px;
@@ -49,3 +67,8 @@ export default {
   }
 }
 </style>
+
+
+
+
+

@@ -2,7 +2,7 @@
   <div class="page-heading">
     <div class="container">
       <div class="page-heading__inner">
-        <nuxt-link class="page-heading__back" v-if="showBack" :to="localePath('/portfolio')"><span><</span>Назад</nuxt-link>
+        <nuxt-link class="page-heading__back" v-if="showBack" :to="localePath('/projects')"><span><</span>Назад</nuxt-link>
         <h1 class="page-heading__title">{{ $t(title) }}</h1>
       </div>
     </div>
@@ -37,12 +37,14 @@ export default {
     position: relative;
   }
   &__title{
-    font-size: 32px;
-    font-family: "Gotham Pro Light", sans-serif;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 300;
     line-height: 1;
     margin: 0;
     text-transform: uppercase;
+    @media (min-width: 768px) {
+      font-size: 32px;
+    }
   }
   &__back {
     font-size: 14px;

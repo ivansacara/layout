@@ -2,16 +2,17 @@
   <div class="slider">
     <div class="slider__container swiper-container" v-swiper:mySwiper="sliderMain" >
       <div class="slider__wrapper swiper-wrapper">
-        <div class="slider__slide swiper-slide">
-          <nuxt-link class="slider__slide-text" :to="localePath('/portfolio')">
-            <p>Загородный дом | Архитектурный проект</p>
-            <h1>AV10</h1>
+
+        <div class="slider__slide swiper-slide" v-for="slide of slide">
+          <nuxt-link class="slider__slide-text" :to="localePath(`/projects/${slide.url}`)">
+            <p>{{ slide.title }}</p>
+            <h1>{{ slide.postName }}</h1>
           </nuxt-link>
           <div class="slider__slide-image">
-            <img class="slider__slide-img" src="https://mirpozitiva.ru/wp-content/uploads/2019/11/1472042660_10.jpg"  alt="slide"/>
+            <img class="slider__slide-img" :src="slide.image"  alt="slide"/>
           </div>
-
         </div>
+
       </div>
         <button id="slider__button-prev" class="slider__button-prev swiper-button slider__btn" >
           <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 267 512.43">
@@ -30,7 +31,7 @@
 <script>
 export default {
   name: "Slider",
-  props: ["slider"],
+  props: ["slide"],
 
   data() {
     return {
@@ -102,9 +103,10 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    min-width: 310px;
     p {
       font-size: 14px;
-      font-family: "Gotham Pro Light", sans-serif;
+      font-weight: 300;
       line-height: 1;
       margin-bottom: 35px;
       @media (min-width: 768px) {
@@ -114,8 +116,8 @@ export default {
     h1 {
       font-size: 40px;
       line-height: 1;
-      font-family: "Gotham Pro Light", sans-serif;
-      font-weight: 400;
+      font-weight: 300;
+      text-transform: uppercase;
       @media (min-width: 768px) {
         font-size: 60px;
       }

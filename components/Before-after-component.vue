@@ -1,15 +1,14 @@
 <template>
   <div class="before-after__item">
     <div class="before-after__item-title">
-      Vander Park, 88
-      <span>(дизайн квартиры)</span>
+      {{ beforeAfter.title }}
     </div>
     <div class="before-after__item-images">
       <div class="before-after__item-image-wrapper">
-        <img src="../static/img/white_background.jpg" alt="" class="before-after__item-image">
+        <img :src="beforeAfter.imageLeft" alt="" class="before-after__item-image">
       </div>
       <div class="before-after__item-image-wrapper">
-        <img src="../static/img/white_background.jpg" alt="" class="before-after__item-image">
+        <img :src="beforeAfter.imageRight" alt="" class="before-after__item-image">
       </div>
     </div>
   </div>
@@ -19,6 +18,9 @@
 
 export default {
   name: "Before-After-Component",
+  props: ["beforeAfter"],
+
+
 };
 </script>
 

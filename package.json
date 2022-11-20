@@ -9,11 +9,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^15.13.1",
+    "@contentful/rich-text-react-renderer": "^15.12.1",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/i18n": "^7.2.0",
     "@nuxtjs/strapi": "^1.6.1",
     "@nuxtjs/yandex-metrika": "^1.4.0",
-    "contentful": "^9.1.12",
+    "contentful": "^9.2.11",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "nuxt-chatra-module": "^4.0.1",

@@ -1,12 +1,15 @@
 <template>
   <div class="post-image">
-    <img class="post-image__img" src="../static/img/white_background_2.jpg" alt="" >
+    <img class="post-image__img" :src="content.image.fields.file.url" alt="" >
   </div>
 </template>
 
 <script>
 export default {
   name: "Post-image",
+  props: ["content"],
+
+
 }
 </script>
 
@@ -17,11 +20,8 @@ export default {
   height: 100%;
   max-height: 712px;
   margin-bottom: 10px;
-  &:last-child {
-    margin-bottom: 0;
-  }
 
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     margin-bottom: 20px;
   }
 

@@ -1,15 +1,16 @@
 <template>
   <div class="about-page">
     <PageHeading :title=title />
-      <div class="about-page__content">
-        <p>{{ $t('aboutPage.text_1') }}</p>
-        <p>{{ $t('aboutPage.text_2') }}</p>
-        <p>{{ $t('aboutPage.text_3') }}</p>
-      </div>
+      <div class="about-page__content" v-for="about of about" v-html="about.content"></div>
     </div>
 </template>
 
 <script>
+import { createClient } from "~/plugins/contentful.js";
+
+const client = createClient();
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+
 export default {
   name:"About",
 
@@ -27,15 +28,35 @@ export default {
     return {
       title: 'header.about',
     }
-  }
+  },
+  async asyncData({ env, i18n }) {
+    return Promise.all([
+      client.getEntries({
+        content_type: "aboutUs",
+        order: "-sys.createdAt",
+      }),
+    ])
+      .then(([aboutUs]) => {
+        return{
+          about: aboutUs.items.map((text) => {
+            return {
+              content: documentToHtmlString(text.fields[`text_${i18n.locale}`])
+            }
+          })
+        }
+      })
+      .catch(console.error);
+  },
 }
+
+
 </script>
 
 <style lang="scss">
 .about-page {
   text-align: center;
   &__content {
-    max-width: 1350px;
+    max-width: 760px;
     width: 100%;
     margin: 0 auto;
     padding-left: 15px;
@@ -45,8 +66,15 @@ export default {
       padding-right: 40px;
     }
 
-    p:not(:last-child){
-      margin-bottom: 25px;
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.2;
+      text-align: left;
+
+      &:not(:last-child){
+        margin-bottom: 25px;
+      }
     }
   }
 

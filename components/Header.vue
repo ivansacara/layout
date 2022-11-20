@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header__main">
       <div class="header__main-top" >
-        <a class="header__phone-link header__phone-link--mobile" href="tel:+37379187494">
+        <a class="header__phone-link header__phone-link--mobile" v-bind:href="'tel:' + $t('phone.number')">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
             <path
               d="M23.45 20.93a3 3 0 0 0-4.25 0l-1.45 1.45a26.14 26.14 0 0 1-4.51-3.62 26.62 26.62 0 0 1-3.62-4.51l1.45-1.45a3 3 0 0 0 0-4.25L8.24 5.73a2.93 2.93 0 0 0-2.11-.88h0A3 3 0 0 0 4 5.73L2.64 7.08A6.37 6.37 0 0 0 1 12.33c.32 3.75 2.78 8.26 6.57 12.06S15.92 30.64 19.67 31a7.87 7.87 0 0 0 .84 0 6.07 6.07 0 0 0 4.41-1.64L26.27 28a3 3 0 0 0 .88-2.13 2.93 2.93 0 0 0-.88-2.11zm1.41 5.66L23.5 27.94a4.57 4.57 0 0 1-3.66 1c-3.25-.28-7.39-2.58-10.81-6S3.31 15.41 3 12.16a4.53 4.53 0 0 1 1-3.66L5.41 7.14a1 1 0 0 1 .71-.29h0a1 1 0 0 1 .71.29L9.66 10a1 1 0 0 1 0 1.41l-2 2a1 1 0 0 0-.16 1.21 27.49 27.49 0 0 0 4.33 5.58 27.49 27.49 0 0 0 5.58 4.33 1 1 0 0 0 1.21-.16l2-2a1 1 0 0 1 1.41 0l2.83 2.83h0a1 1 0 0 1 .29.71A1 1 0 0 1 24.86 26.59zM26.6 5.39A14.92 14.92 0 0 0 16 1a1 1 0 1 0 0 2A13 13 0 0 1 29 16.11a1 1 0 0 0 1 1h0a1 1 0 0 0 1-1A14.91 14.91 0 0 0 26.6 5.39z" />
@@ -25,7 +25,7 @@
          <Logo />
         </div>
 
-        <a href="tel:+37379187494" class="header__phone-link header__phone-link--desktop phone-link">MD: +373 79 187 494</a>
+        <a v-bind:href="'tel:' + $t('phone.number')" class="header__phone-link header__phone-link--desktop phone-link">MD: {{ $t('phone.number') }}</a>
 
         <Burger />
       </div>
@@ -62,7 +62,7 @@ export default {
       menu: [
         { text: 'header.main', path: '/' },
         { text: 'header.services', path: '/services' },
-        { text: 'header.portfolio', path: '/portfolio' },
+        { text: 'header.portfolio', path: '/projects' },
         { text: 'header.beforeAfter', path: '/before-after' },
         { text: 'header.about', path: '/about' },
         { text: 'header.contacts', path: '/contacts' }
@@ -94,7 +94,6 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  //z-index: 15;
   z-index: 1001;
   &__main {
     position: relative;
@@ -132,7 +131,7 @@ export default {
     }
   }
   &__phone-link {
-    font-family: "Gotham Pro Light", sans-serif;
+    font-weight: 300;
     &--mobile {
       @media (min-width: 768px) {
         display: none;
@@ -173,16 +172,15 @@ export default {
   }
   &__nav-link {
     padding: 15px 0;
-    font-size: 21px;
-    font-family: "Gotham Pro Light", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
     line-height: 1;
     white-space: nowrap;
     @media (min-width: 768px) {
       padding: 0 13px;
-      font-size: 19px;
     }
     @media (min-width: 992px) {
-      font-size: 21px;
+      font-size: 18px;
     }
   }
   &__main-bottom {

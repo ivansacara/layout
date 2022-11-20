@@ -27,7 +27,7 @@ import json from '../static/chatra.json'
 
 export default {
   name: "default",
-  data () {
+  data() {
       return {
         lang: '',
         chatraJson: json,
@@ -58,22 +58,15 @@ export default {
     }
     this.chatra(this.lang);
 
-      GlobalEventEmitter.$on('lang-changed', (lang) => {
-
-        this.chatra(lang);
-        window.Chatra('restart')
-
-      })
+    GlobalEventEmitter.$on('lang-changed', (lang) => {
+      this.chatra(lang);
+      window.Chatra('restart')
+    })
   }
 };
 
 </script>
 <style lang="scss">
-@font-face {
-  font-family: "Gotham Pro";
-  src: local("Gotham Pro"),
-  url(static/font/GothaProReg.ttf),url(static/font/GothaProLig.ttf) format("truetype");
-}
 *,
 *::before,
 *::after {
@@ -91,7 +84,7 @@ body {
   line-height: 1.2;
   font-weight: 400;
   color: #fff;
-  font-family: 'Gotham Pro Regular', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   @media (min-width: 768px) {
     font-size: 18px;
@@ -192,14 +185,14 @@ a {
     padding-top: 100px;
     padding-bottom: 50px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     height: 100vh;
   }
   &__title{
     font-size: 38px;
     line-height: 1;
     font-weight: 400;
-    font-family: "Gotham Pro Medium", sans-serif;
+    //font-family: "Gotham Pro Medium", sans-serif;
     text-transform: uppercase;
     margin-bottom: 22px;
     padding: 0 15px;
@@ -284,15 +277,6 @@ a {
     border-bottom: none;
   }
 }
-//.portfolio-page,
-//.before-after-page,
-//.services-page,
-//.about-page,
-//.contacts-page {
-//  .page-heading .page-heading__back{
-//    display: none;
-//  }
-//}
 
 .portfolio-page,
 .before-after-page,
