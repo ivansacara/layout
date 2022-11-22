@@ -146,6 +146,9 @@
     color: #ffffff;
     text-transform: uppercase;
     font-size: 20px;
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     transition: all 0.3s;
     max-width: 450px;
     margin: 0 auto;

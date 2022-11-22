@@ -93,6 +93,7 @@ export default {
   &__button{
     text-transform: uppercase;
     font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     line-height: 0.9;
     color: #ffffff;

@@ -37,6 +37,7 @@ export default {
   font-size: 10px;
   line-height: 1;
   font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   &:hover {
     background-color: #bebebe;

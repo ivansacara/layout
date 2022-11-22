@@ -47,7 +47,7 @@ export default {
     mail:"Email",
     phone:"Telefon",
     message:"Mesaj",
-    btnText:"Tremite"
+    btnText:"Trimite"
   },
   servicesPage: {
     title: "COMANDA UN PROIECT",
