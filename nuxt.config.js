@@ -140,7 +140,7 @@ export default {
   },
 
   chatra: {
-    id: 'DK65oECdyXFxaTMBR',
+    id: 'tRYeGETaa4Qhd7cpJ',
   },
   router: {
     // scrollBehavior: function (to, from, savedPosition) {
