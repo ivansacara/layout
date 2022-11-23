@@ -8,7 +8,7 @@
       <input class="contact-form__input" required v-model="phone" type="tel" id="phone">
       <label class="contact-form__label" for="comment">{{ $t('contactForm.message') }}</label>
       <input class="contact-form__input" required v-model="message" type="text" id="comment">
-      <button class="contact-form__button" type="submit" >{{ $t('contactForm.btnText') }}</button>
+      <button class="contact-form__button btn" type="submit" >{{ $t('contactForm.btnText') }}</button>
     </form>
 </template>
 
@@ -91,31 +91,13 @@ export default {
     }
   }
   &__button{
-    text-transform: uppercase;
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    line-height: 0.9;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    background-color: transparent;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 320px;
-    width: 100%;
     margin: 0 auto;
-    cursor: pointer;
-    transition: all 0.5s;
-    @media (min-width: 576px) {
-      font-size: 20px;
-      padding: 25px 0;
-    }
-    &:hover,
-    &:focus{
-      color: #888888;
-      border-color: #888888;
+
+    @media (max-width: 768px){
+      font-size: 18px;
+      max-width: 300px;
+      width: 100%;
+      height: 55px;
     }
   }
 }

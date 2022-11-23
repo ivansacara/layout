@@ -1,5 +1,5 @@
 <template>
-    <button class="show-more-btn" :disabled='isLoading'  @click="LoadBefore()">{{ $t('showMoreBtn.text') }}</button>
+    <button class="show-more-btn btn" :disabled='isLoading'  @click="LoadBefore()">{{ $t('showMoreBtn.text') }}</button>
 </template>
 
 <script>
@@ -17,24 +17,14 @@ export default {
 </script>
 <style lang="scss">
 .show-more-btn {
-  padding: 20px 30px;
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 1;
-  display: block;
   margin: 80px auto 0;
   position: relative;
-  cursor: pointer;
-  transition: all 0.3s;
-  outline: none;
+
   &:hover,
   &:focus{
-    border-color: #888888;
+    color: #fff;
+    border-color: #fff;
   }
-
 
   &:before {
     content: '';
@@ -60,10 +50,11 @@ export default {
     }
 
   }
-  @media (min-width: 768px) {
-    padding: 25px 50px;
-    font-size: 20px;
-
+  @media (max-width: 768px){
+    font-size: 18px;
+    max-width: 300px;
+    width: 100%;
+    height: 55px;
   }
 }
 </style>

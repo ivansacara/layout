@@ -122,6 +122,30 @@ main {
     padding-right: 40px;
   }
 }
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+  width: 395px;
+  height: 65px;
+
+  &:hover,
+  &:focus{
+    color: #888888;
+    border-color: #888888;
+  }
+}
 .phone-link{
   font-size: 16px;
   line-height: 1.1;

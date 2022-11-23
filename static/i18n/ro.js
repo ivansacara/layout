@@ -16,7 +16,7 @@ export default {
       info: {
         interior: "Design interior",
         architecture: "Arhitectură",
-        turnkey: "Reparatie la cheie",
+        turnkey: "Reparație la cheie",
     },
     btn: {
       text: "Consultație gratuită"
