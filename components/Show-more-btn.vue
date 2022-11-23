@@ -23,7 +23,7 @@ export default {
   &:hover,
   &:focus{
     color: #fff;
-    border-color: #fff;
+    border-color: #888888;
   }
 
   &:before {
