@@ -166,6 +166,7 @@ a {
 
 .soc__link {
   padding: 0 7px;
+  display: inline-block;
   svg {
     transition: all 0.3s;
     &:hover,
