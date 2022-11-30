@@ -88,7 +88,7 @@ export default {
               title: itemProps[`title_${i18n.locale}`],
               postName: itemProps[`postName_${i18n.locale}`],
               image: itemProps.image.fields.file.url,
-              url: itemProps.link.fields.url
+              url: itemProps.link?.fields.url ? itemProps.link.fields.url : null
             }
           }),
           about: aboutUs.items.map((text) => {

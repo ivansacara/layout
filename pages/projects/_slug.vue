@@ -5,6 +5,7 @@
       <div class="post__content" v-for="item of blocks">
         <PostImages v-if="item.type === 'twoColumnImage'" :content="item.content"/>
         <PostImage v-if="item.type === 'oneColumnImage'" :content="item.content"/>
+        <PostText v-if="item.type === 'postHtml'" :content="item.content"/>
       </div>
 
     </div>

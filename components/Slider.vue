@@ -3,11 +3,15 @@
     <div class="slider__container swiper-container" v-swiper:mySwiper="sliderMain" >
       <div class="slider__wrapper swiper-wrapper">
 
-        <div class="slider__slide swiper-slide" v-for="slide of slide">
-          <nuxt-link class="slider__slide-text" :to="localePath(`/projects/${slide.url}`)">
+        <div class="slider__slide swiper-slide" v-for="slide of slide" >
+          <nuxt-link class="slider__slide-text" v-if="slide.url.length" :to="localePath(`/projects/${slide.url}`)">
             <p>{{ slide.title }}</p>
             <h1>{{ slide.postName }}</h1>
           </nuxt-link>
+          <div class="slider__slide-text" v-if="!slide.url">
+            <p>{{ slide.title }}</p>
+            <h1>{{ slide.postName }}</h1>
+          </div>
           <div class="slider__slide-image">
             <img class="slider__slide-img" :src="slide.image"  alt="slide"/>
           </div>
