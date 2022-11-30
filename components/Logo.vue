@@ -100,6 +100,7 @@
 .logo {
   width: 160px;
   height: 65px;
+  overflow: hidden;
   &__link {
     display: block;
     svg {
