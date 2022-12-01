@@ -30,7 +30,7 @@ export default {
     };
   },
 
-  asyncData({ env, i18n, params, error }) {
+  asyncData({ i18n, params, error }) {
     return Promise.all([
       client.getEntries({
         content_type: "post",

@@ -2,7 +2,7 @@
   <div class="portfolio-page">
     <PageHeading :title=title />
     <div class="portfolio-page__content">
-      <Posts :eventName="eventName" :project="projects"  :isLoading="isLoading"/>
+      <Posts :eventName="eventName" :project="projects"  :isLoading="isLoading" :perPage="perPage" :total="total"/>
     </div>
   </div>
 </template>
@@ -31,6 +31,7 @@ export default {
       page: 1,
       isLoading: false,
       eventName: 'load-more-projects',
+      perPage: POST_PER_PAGE,
     }
   },
   created() {
@@ -52,6 +53,7 @@ export default {
       }),
     ])
       .then(([data]) => {
+        // console.log(data.total)
         return {
           locale: i18n.locale,
           total: data.total,
@@ -96,6 +98,7 @@ export default {
           this.projects = [...this.projects, ...newPosts];
           this.page++;
           this.isLoading = false;
+          // console.log(this.projects)
         })
         .catch(console.error);
     }

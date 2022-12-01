@@ -1,18 +1,20 @@
 <template>
-    <button class="show-more-btn btn" :disabled='isLoading'  @click="LoadBefore()">{{ $t('showMoreBtn.text') }}</button>
+    <button class="show-more-btn btn" v-bind:class="{'disabled': project.length === total}"  :disabled='isLoading'  @click="LoadBefore()">{{ $t('showMoreBtn.text') }}</button>
 </template>
 
 <script>
 import { GlobalEventEmitter } from '/utils/globalEventEmitter';
 export default {
   name: "Show-more-btn",
-  props:['eventName', 'isLoading'],
+  props:['eventName', 'isLoading', 'project','total'],
 
   methods: {
     LoadBefore() {
       GlobalEventEmitter.$emit(this.eventName);
+      }
     }
-  }
+
+
 }
 </script>
 <style lang="scss">
@@ -48,7 +50,9 @@ export default {
       height: 45px;
       background-image: url("../static/img/loading.gif");
     }
-
+  }
+  &.disabled {
+    display: none;
   }
   @media (max-width: 768px){
     font-size: 18px;

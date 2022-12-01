@@ -4,7 +4,7 @@
     <div class="container">
       <div class="before-after-page__content">
         <BeforeAfterComponent v-for="(item, index) of posts"  v-bind:key="index" :beforeAfter="item"/>
-        <ShowMoreBtn :eventName="eventName" :isLoading="isLoading"/>
+        <ShowMoreBtn :eventName="eventName" :isLoading="isLoading" :total="total" :project="posts"/>
       </div>
     </div>
   </div>

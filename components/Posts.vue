@@ -10,7 +10,7 @@
       </div>
 
     </div>
-    <ShowMoreBtn :eventName="eventName" :isLoading="isLoading"/>
+    <ShowMoreBtn :eventName="eventName" :isLoading="isLoading" :project="project" :total="total"/>
   </div>
 </template>
 
@@ -18,7 +18,7 @@
 <script>
 export default {
   name: "Posts",
-  props:['eventName','project', 'isLoading'],
+  props:['eventName','project', 'isLoading', 'total'],
 
 }
 </script>
