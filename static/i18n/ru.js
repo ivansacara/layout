@@ -14,8 +14,8 @@ export default {
   },
   footer: {
     info: {
-      interior: "Дизаин интерьера",
-      architecture: "Архитекрута",
+      interior: "Дизайн интерьера",
+      architecture: "Архитектура",
       turnkey: "Ремонт под ключ",
     },
     btn: {
@@ -23,8 +23,8 @@ export default {
     }
   },
   fixedBtn: {
-    text_1: "мы онлаин.",
-    text_2: "напишите нам"
+    text_1: "Мы Онлайн.",
+    text_2: "Напишите нам"
   },
   showMoreBtn: {
     text: "Показать Больше"

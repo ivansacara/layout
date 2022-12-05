@@ -27,14 +27,13 @@ export default {
   padding: 10px;
   background-color: #FFFFFF;
   color: #000000;
-  text-transform: uppercase;
   position: fixed;
   right: 0;
   bottom: 70px;
   z-index: 9;
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
@@ -46,6 +45,7 @@ export default {
     display: none;
     @media (min-width: 768px) {
       display: block;
+      margin-left: 5px;
     }
   }
   @media (min-width: 768px) {

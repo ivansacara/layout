@@ -23,7 +23,7 @@ export default {
     }
   },
   fixedBtn: {
-    text_1: "we are online.",
+    text_1: "We are Online.",
     text_2: "Contact Us"
   },
   showMoreBtn: {

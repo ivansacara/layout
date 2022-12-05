@@ -23,8 +23,8 @@ export default {
     }
   },
   fixedBtn: {
-    text_1: "suntem online.",
-    text_2: "scrie-ne"
+    text_1: "Suntem Online.",
+    text_2: "Scrie-ne"
   },
   showMoreBtn: {
     text: "Vezi toate proiectele"
