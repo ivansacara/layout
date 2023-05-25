@@ -56,5 +56,8 @@ export default {
   },
   phone:{
     number: "+373 79 187 494"
+  },
+  project:{
+    back: "назад"
   }
 }

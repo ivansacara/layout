@@ -1,17 +1,20 @@
 <template>
-  <div class="burger" @click="openNavigation" v-bind:class="{'active': isActive}" >
+  <div
+    class="burger"
+    @click="openNavigation"
+    v-bind:class="{ active: isActive }"
+  >
     <span></span>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "Header",
   data() {
     return {
       isActive: false,
-    }
+    };
   },
 
   methods: {
@@ -23,7 +26,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .burger {
   display: block;
   position: relative;
@@ -34,7 +36,7 @@ export default {
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 2px;
@@ -58,5 +60,4 @@ export default {
     display: none;
   }
 }
-
 </style>

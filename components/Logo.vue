@@ -1,13 +1,13 @@
 <template>
   <div class="logo">
-    <nuxt-link class="logo__link" to="/">
+    <nuxt-link class="logo__link" :to="localePath('/')">
       <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 2301.33 2069.33" style="enable-background:new 0 0 2301.33 2069.33;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FFFFFF;}
-  .st1{enable-background:new    ;}
-  .st2{fill:#FFFEFE;}
-</style>
+		<style type="text/css">
+			.st0{fill:#FFFFFF;}
+		.st1{enable-background:new    ;}
+		.st2{fill:#FFFEFE;}
+		</style>
         <g>
 	<g id="MAIN_LOGO-2-arch.psd">
 		<g>

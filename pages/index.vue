@@ -1,21 +1,24 @@
 <template>
   <div class="main-page">
-    <Slider :slide="slides"/>
+    <Slider :slide="slides" />
     <div class="container">
       <div class="main-page__description">
         <h2 class="main-page__title">{{ $t("mainPage.title") }}</h2>
-        <div class="main-page__text" v-for="about of about" v-html="about.content">
-        </div>
+        <div
+          class="main-page__text"
+          v-for="about of about"
+          v-html="about.content"
+        ></div>
       </div>
     </div>
-    <Posts :eventName="eventName" :project="projects"/>
+    <Posts :eventName="eventName" :project="projects" />
   </div>
 </template>
 
 <script>
 import { createClient } from "~/plugins/contentful.js";
-import {GlobalEventEmitter} from "@/utils/globalEventEmitter";
-import {documentToHtmlString} from "@contentful/rich-text-html-renderer";
+import { GlobalEventEmitter } from "@/utils/globalEventEmitter";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 const client = createClient();
 export default {
   name: "IndexPage",
@@ -31,22 +34,21 @@ export default {
     };
   },
 
-  data () {
+  data() {
     return {
-      eventName: 'redirect-to',
-
-    }
+      eventName: "redirect-to",
+    };
   },
   mounted() {
     GlobalEventEmitter.$emit("header-add-class", "hasBorder");
     GlobalEventEmitter.$on(this.eventName, () => {
-      this.$router.push('/projects')
-    })
+      this.$router.push("/projects");
+    });
   },
 
   beforeDestroy() {
     GlobalEventEmitter.$emit("header-remove-class", "hasBorder");
-    GlobalEventEmitter.$off(this.eventName)
+    GlobalEventEmitter.$off(this.eventName);
   },
   async asyncData({ i18n }) {
     return Promise.all([
@@ -77,8 +79,8 @@ export default {
             return {
               title: pathToItem[`title_${i18n.locale}`],
               preview: pathToItem.preview.fields.file.url,
-              url: pathToItem.url
-            }
+              url: pathToItem.url,
+            };
           }),
 
           slides: slider.items.map((item) => {
@@ -88,16 +90,17 @@ export default {
               title: itemProps[`title_${i18n.locale}`],
               postName: itemProps[`postName_${i18n.locale}`],
               image: itemProps.image.fields.file.url,
-              url: itemProps.link?.fields.url ? itemProps.link.fields.url : null
-            }
+              url: itemProps.link?.fields.url
+                ? itemProps.link.fields.url
+                : null,
+            };
           }),
           about: aboutUs.items.map((text) => {
             return {
-              content: documentToHtmlString(text.fields[`text_${i18n.locale}`])
-            }
-          })
-
-        }
+              content: documentToHtmlString(text.fields[`text_${i18n.locale}`]),
+            };
+          }),
+        };
       })
       .catch(console.error);
   },

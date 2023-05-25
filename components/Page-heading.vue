@@ -2,7 +2,7 @@
   <div class="page-heading">
     <div class="container">
       <div class="page-heading__inner">
-        <nuxt-link class="page-heading__back" v-if="showBack" :to="localePath('/projects')"><span><</span>Назад</nuxt-link>
+        <nuxt-link class="page-heading__back" v-if="showBack" :to="localePath('/projects')"><span>< </span>{{ $t('project.back') }}</nuxt-link>
         <h1 class="page-heading__title">{{ $t(title) }}</h1>
       </div>
     </div>
