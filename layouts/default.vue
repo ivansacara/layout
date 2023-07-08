@@ -206,10 +206,11 @@ a {
   overflow: auto;
   text-align: center;
   padding-top: 40px;
-  @media (min-width: 768px) {
-    padding-top: 100px;
-    padding-bottom: 50px;
-  }
+  max-height: 880px;
+  //@media (min-width: 768px) {
+  //  padding-top: 100px;
+  //  padding-bottom: 50px;
+  //}
   @media (max-width: 992px) {
     height: 100vh;
   }

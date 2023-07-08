@@ -55,7 +55,7 @@ export default {
     subTitleBottom:"Our manager will contact you shortly via email or phone",
   },
   phone:{
-    number: "+373 79 187 494"
+    number: "+373 69 580 787"
   },
   project:{
     back: "go back"

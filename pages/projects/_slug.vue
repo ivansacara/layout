@@ -2,11 +2,14 @@
   <div class="post-page">
     <PageHeading  :title="title" showBack/>
     <div class="container">
-      <div class="post__content" v-for="item of blocks">
-        <PostImages v-if="item.type === 'twoColumnImage'" :content="item.content"/>
-        <PostImage v-if="item.type === 'oneColumnImage'" :content="item.content"/>
-        <PostText v-if="item.type === 'postHtml'" :content="item.content"/>
+      <div class="post-page__content">
+        <div class="post-page__content-item" v-for="item of blocks">
+          <PostImages v-if="item.type === 'twoColumnImage'" :content="item.content"/>
+          <PostImage v-if="item.type === 'oneColumnImage'" :content="item.content"/>
+          <PostText v-if="item.type === 'postHtml'" :content="item.content"/>
+        </div>
       </div>
+
 
     </div>
   </div>
@@ -63,7 +66,7 @@ export default {
 .post-page {
 
   &__content {
-    max-width: 1350px;
+    max-width: 1430px;
     width: 100%;
     margin: 0 auto;
   }

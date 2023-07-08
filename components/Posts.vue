@@ -83,7 +83,7 @@ export default {
     transition: all 0.3s;
     visibility: hidden;
     opacity: 0;
-
+    text-align: center;
   }
   &__item-image {
     width: 100%;

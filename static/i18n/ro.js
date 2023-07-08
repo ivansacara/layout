@@ -55,7 +55,7 @@ export default {
     subTitleBottom:"În scurt timp managerul nostru vă va contacta",
   },
   phone:{
-    number: "+373 79 187 494"
+    number: "+373 69 580 787"
   },
   project:{
     back: "înapoi"
